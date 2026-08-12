@@ -172,6 +172,10 @@ footer{background:var(--pine-deep);color:#93a08b;padding:34px 0}
 .footer-in{display:flex;flex-wrap:wrap;gap:12px 32px;align-items:center;justify-content:space-between;font-size:13.5px}
 .footer-in .serif{color:#e9e4d6;font-size:18px}
 .footer-in a{color:#cfd8c2;text-decoration:none}
+.footer-brand{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:22px;padding-top:18px;border-top:1px solid rgba(195,154,94,.25)}
+.brand-mark{color:var(--gold-bright);font-size:13px;line-height:1;transform:translateY(-1px)}
+.brand-name{color:#efe9da;font-size:12px;font-weight:700;letter-spacing:.28em;text-transform:uppercase}
+.brand-sub{color:#93a08b;font-size:10.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;border-left:1px solid rgba(147,160,139,.35);padding-left:10px}
 .stickybar{display:none}
 .modal{position:fixed;inset:0;z-index:90;display:flex;align-items:center;justify-content:center;padding:20px;visibility:hidden;opacity:0;transition:opacity .3s,visibility .3s}
 .modal.open{visibility:visible;opacity:1}
@@ -666,6 +670,11 @@ footer{background:var(--pine-deep);color:#93a08b;padding:34px 0}
     <span>Калининград, Комсомольская ул., 2А · ежедневно 08:30–20:30 · по записи</span>
     <a href="tel:+79118654460">+7 (911) 865-44-60</a>
   </div>
+  <div class="container footer-brand">
+    <span class="brand-mark">▲</span>
+    <span class="brand-name">ALTAVALTA</span>
+    <span class="brand-sub">САЙТ</span>
+  </div>
 </footer>
 
 <div class="stickybar">
@@ -728,6 +737,10 @@ footer{background:var(--pine-deep);color:#93a08b;padding:34px 0}
         <div class="field">
           <label for="fTime">Желаемое время</label>
           <input id="fTime" name="time" type="time" min="08:30" max="20:30">
+        </div>
+        <div class="field full">
+          <label for="fComment">Комментарий</label>
+          <textarea id="fComment" name="comment" rows="2" placeholder="Пожелания: мастер, услуга, удобное время (необязательно)"></textarea>
         </div>
         <div class="full">
           <button class="btn btn-primary" type="submit" style="width:100%">Отправить заявку</button>
@@ -815,11 +828,14 @@ document.body.classList.add('js');
       name:name.value.trim(),
       phone:phone.value.trim(),
       service:document.getElementById('fService')?document.getElementById('fService').value:'',
+      date:document.getElementById('fDate')?document.getElementById('fDate').value:'',
+      time:document.getElementById('fTime')?document.getElementById('fTime').value:'',
+      comment:document.getElementById('fComment')?document.getElementById('fComment').value:'',
       source:'victoria-demo'
     };
     fetch('https://altavalta-leads.altavalta.workers.dev/',{
       method:'POST',
-      headers:{'Content-Type':'application/json','X-Lead-Key':'AV-oPtuCEMDIaPV0DwJRxZkvQf8'},
+      headers:{'Content-Type':'application/json','X-Lead-Key':'AV-1UqZW0lEhgXpGRBjkG1TF0yn'},
       body:JSON.stringify(payload)
     }).then(function(r){return r.json();}).then(function(res){
       if(btn){btn.disabled=false;btn.textContent='Отправить заявку';}
