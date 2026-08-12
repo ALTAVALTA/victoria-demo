@@ -6,6 +6,9 @@
 <title>Студия красоты «Виктория» — Калининград, Комсомольская 2А | Маникюр, стрижки, косметология</title>
 <meta name="description" content="Студия красоты «Виктория» в центре Калининграда: маникюр и педикюр, стрижки и окрашивание, перманентный макияж, лазерная эпиляция, косметология. Запись по телефону +7 (911) 865-44-60, ежедневно 08:30–20:30.">
 <style>
+@font-face{font-family:'Jost';font-style:normal;font-weight:700;font-display:swap;src:url(fonts/jost-700.woff2) format('woff2')}
+</style>
+<style>
 :root{
   --ivory:#f6f2ea;
   --ivory-2:#efe8db;
@@ -170,12 +173,13 @@ footer{background:var(--pine-deep);color:#93a08b;padding:34px 0}
 .footer-in{display:flex;flex-wrap:wrap;gap:12px 32px;align-items:center;justify-content:space-between;font-size:13.5px}
 .footer-in .serif{color:#e9e4d6;font-size:18px}
 .footer-in a{color:#cfd8c2;text-decoration:none}
-.footer-brand{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:22px;padding-top:18px;border-top:1px solid rgba(195,154,94,.25);flex-wrap:wrap}
-.brand-made{color:#93a08b;font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase}
-.brand-mark{color:var(--gold-bright);font-size:15px;line-height:1;transform:translateY(-1px)}
-.brand-name{color:#efe9da;font-size:12.5px;font-weight:700;letter-spacing:.28em;text-transform:uppercase}
-.brand-link{display:inline-flex;align-items:center;gap:10px;text-decoration:none;transition:opacity .3s}
+.footer-brand{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:24px;padding-top:18px;border-top:1px solid rgba(195,154,94,.25);flex-wrap:wrap}
+.brand-made{color:#93a08b;font-family:'Jost',sans-serif;font-size:11px;font-weight:600;letter-spacing:.3em;text-transform:lowercase}
+.brand-link{display:inline-flex;align-items:center;text-decoration:none;transition:opacity .3s}
 .brand-link:hover{opacity:.85}
+.brand-name{display:inline-flex;color:#efe9da;font-family:'Jost',sans-serif;font-size:17px;font-weight:700;letter-spacing:.42em;text-transform:uppercase;line-height:1}
+.brand-name b{font-weight:inherit}
+.brand-axis{color:var(--gold-bright)}
 .stickybar{display:none}
 .modal{position:fixed;inset:0;z-index:90;display:flex;align-items:center;justify-content:center;padding:20px;visibility:hidden;opacity:0;transition:opacity .3s,visibility .3s}
 .modal.open{visibility:visible;opacity:1}
@@ -671,10 +675,9 @@ footer{background:var(--pine-deep);color:#93a08b;padding:34px 0}
     <a href="tel:+79118654460">+7 (911) 865-44-60</a>
   </div>
   <div class="container footer-brand">
-    <span class="brand-made">Разработан в</span>
-    <span class="brand-mark">▲</span>
-    <a class="brand-link" href="https://altavalta.ru" target="_blank" rel="noopener">
-      <span class="brand-name">ALTAVALTA</span>
+    <span class="brand-made">created by</span>
+    <a class="brand-link" href="https://t.me/altavalta" target="_blank" rel="noopener">
+      <span class="brand-name"><b>A</b><b>L</b><b>T</b><b>A</b><b class="brand-axis">V</b><b>A</b><b>L</b><b>T</b><b>A</b></span>
     </a>
   </div>
 </footer>
