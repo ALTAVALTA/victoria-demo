@@ -666,6 +666,8 @@ footer{background:var(--pine-deep);color:#93a08b;padding:34px 0}
     <span>Калининград, Комсомольская ул., 2А · ежедневно 08:30–20:30 · по записи</span>
     <a href="tel:+79118654460">+7 (911) 865-44-60</a>
   </div>
+
+  <div class="footer-credit"><a href="https://altavalta.ru" target="_blank" rel="noopener">Разработано в ALTAVALTA</a></div>
 </footer>
 
 <div class="stickybar">
@@ -819,7 +821,7 @@ document.body.classList.add('js');
     };
     fetch('https://altavalta-leads.altavalta.workers.dev/',{
       method:'POST',
-      headers:{'Content-Type':'application/json','X-Lead-Key':'AV-oPtuCEMDIaPV0DwJRxZkvQf8'},
+      headers:{'Content-Type':'application/json','X-Lead-Key':'AV-1UqZW0lEhgXpGRBjkG1TF0yn'},
       body:JSON.stringify(payload)
     }).then(function(r){return r.json();}).then(function(res){
       if(btn){btn.disabled=false;btn.textContent='Отправить заявку';}
