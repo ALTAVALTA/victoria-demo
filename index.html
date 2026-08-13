@@ -13,6 +13,15 @@
     .btn.loading .spinner{display:inline-block}
     .btn.loading .btn-label{vertical-align:middle}
     @keyframes spin{to{transform:rotate(360deg)}}
+
+    .chips{display:flex;flex-direction:column;gap:10px}
+    .chips-group{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+    .chips-cat{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);min-width:52px}
+    .chip{display:inline-block;padding:9px 14px;border-radius:999px;border:1.5px solid var(--line);background:#fff;font-family:var(--font-body);font-size:13.5px;color:var(--ink);cursor:pointer;transition:border-color .2s,background .2s,color .2s;line-height:1.2}
+    .chip:hover{border-color:var(--leaf)}
+    .chip.active{background:var(--leaf);border-color:var(--leaf);color:#fff}
+    .chip-other{border-style:dashed}
+    .chip-other.active{background:var(--pine);border-color:var(--pine);color:#fff}
 </style>
 <style>
 :root{
@@ -728,34 +737,35 @@ footer{background:var(--pine-deep);color:#93a08b;padding:34px 0}
         </div>
         <div class="field full">
           <label for="fService">Услуга</label>
-          <select id="fService" name="service">
-            <optgroup label="Ногти">
-              <option>Маникюр и гель-лак</option>
-              <option>Педикюр</option>
-              <option>Наращивание ногтей</option>
-            </optgroup>
-            <optgroup label="Волосы">
-              <option>Стрижка женская</option>
-              <option>Стрижка мужская</option>
-              <option>Стрижка детская</option>
-              <option>Окрашивание волос</option>
-              <option>Кератиновое выпрямление</option>
-              <option>Праздничная укладка</option>
-            </optgroup>
-            <optgroup label="Лицо">
-              <option>Перманентный макияж</option>
-              <option>Удаление татуажа лазером</option>
-              <option>Карбоновый пилинг</option>
-              <option>Безинъекционная биоревитализация</option>
-              <option>Наращивание ресниц</option>
-            </optgroup>
-            <optgroup label="Тело">
-              <option>Лазерная эпиляция</option>
-              <option>Элос-эпиляция</option>
-              <option>Массаж / уход для тела</option>
-            </optgroup>
-            <option>Другое / подскажет администратор</option>
-          </select>
+          <div class="chips" id="serviceChips">
+            <div class="chips-group"><span class="chips-cat">Ногти</span>
+              <button type="button" class="chip" data-service="Маникюр и гель-лак">Маникюр и гель-лак</button>
+              <button type="button" class="chip" data-service="Педикюр">Педикюр</button>
+              <button type="button" class="chip" data-service="Наращивание ногтей">Наращивание ногтей</button>
+            </div>
+            <div class="chips-group"><span class="chips-cat">Волосы</span>
+              <button type="button" class="chip" data-service="Стрижка женская">Стрижка женская</button>
+              <button type="button" class="chip" data-service="Стрижка мужская">Стрижка мужская</button>
+              <button type="button" class="chip" data-service="Стрижка детская">Стрижка детская</button>
+              <button type="button" class="chip" data-service="Окрашивание волос">Окрашивание волос</button>
+              <button type="button" class="chip" data-service="Кератиновое выпрямление">Кератиновое выпрямление</button>
+              <button type="button" class="chip" data-service="Праздничная укладка">Праздничная укладка</button>
+            </div>
+            <div class="chips-group"><span class="chips-cat">Лицо</span>
+              <button type="button" class="chip" data-service="Перманентный макияж">Перманентный макияж</button>
+              <button type="button" class="chip" data-service="Удаление татуажа лазером">Удаление татуажа лазером</button>
+              <button type="button" class="chip" data-service="Карбоновый пилинг">Карбоновый пилинг</button>
+              <button type="button" class="chip" data-service="Безинъекционная биоревитализация">Безинъекционная биоревитализация</button>
+              <button type="button" class="chip" data-service="Наращивание ресниц">Наращивание ресниц</button>
+            </div>
+            <div class="chips-group"><span class="chips-cat">Тело</span>
+              <button type="button" class="chip" data-service="Лазерная эпиляция">Лазерная эпиляция</button>
+              <button type="button" class="chip" data-service="Элос-эпиляция">Элос-эпиляция</button>
+              <button type="button" class="chip" data-service="Массаж / уход для тела">Массаж / уход для тела</button>
+            </div>
+            <button type="button" class="chip chip-other" data-service="Другое / подскажет администратор">Другое</button>
+          </div>
+          <select id="fService" name="service" hidden><option>Маникюр и гель-лак</option><option>Педикюр</option><option>Наращивание ногтей</option><option>Стрижка женская</option><option>Стрижка мужская</option><option>Стрижка детская</option><option>Окрашивание волос</option><option>Кератиновое выпрямление</option><option>Праздничная укладка</option><option>Перманентный макияж</option><option>Удаление татуажа лазером</option><option>Карбоновый пилинг</option><option>Безинъекционная биоревитализация</option><option>Наращивание ресниц</option><option>Лазерная эпиляция</option><option>Элос-эпиляция</option><option>Массаж / уход для тела</option><option>Другое / подскажет администратор</option></select>
         </div>
         <div class="field">
           <label for="fDate">Желаемая дата</label>
@@ -763,7 +773,34 @@ footer{background:var(--pine-deep);color:#93a08b;padding:34px 0}
         </div>
         <div class="field">
           <label for="fTime">Желаемое время</label>
-          <input id="fTime" name="time" type="time" min="08:30" max="20:30" step="1800">
+          <select id="fTime" name="time">
+            <option value="">Удобное время</option>
+              <option>08:30</option>
+              <option>09:00</option>
+              <option>09:30</option>
+              <option>10:00</option>
+              <option>10:30</option>
+              <option>11:00</option>
+              <option>11:30</option>
+              <option>12:00</option>
+              <option>12:30</option>
+              <option>13:00</option>
+              <option>13:30</option>
+              <option>14:00</option>
+              <option>14:30</option>
+              <option>15:00</option>
+              <option>15:30</option>
+              <option>16:00</option>
+              <option>16:30</option>
+              <option>17:00</option>
+              <option>17:30</option>
+              <option>18:00</option>
+              <option>18:30</option>
+              <option>19:00</option>
+              <option>19:30</option>
+              <option>20:00</option>
+              <option>20:30</option>
+          </select>
         </div>
         <div class="field full">
           <label for="fComment">Комментарий</label>
@@ -802,6 +839,13 @@ document.body.classList.add('js');
   var form=document.getElementById('bookForm');
   var success=document.getElementById('formSuccess');
   var serviceSelect=document.getElementById('fService');
+  var chips=document.querySelectorAll('.chip');
+  chips.forEach(function(c){c.addEventListener('click',function(){
+    chips.forEach(function(x){x.classList.remove('active');});
+    c.classList.add('active');
+    serviceSelect.value=c.getAttribute('data-service');
+  });});
+
   var dateInput=document.getElementById('fDate');
   var lastFocus=null;
 
@@ -813,9 +857,9 @@ document.body.classList.add('js');
     lastFocus=document.activeElement;
     form.hidden=false;success.hidden=true;
     if(service){
-      for(var i=0;i<serviceSelect.options.length;i++){
-        if(serviceSelect.options[i].text===service){serviceSelect.selectedIndex=i;break;}
-      }
+      serviceSelect.value=service;
+      var chip=document.querySelector('.chip[data-service="'+service+'"]');
+      if(chip){chips.forEach(function(x){x.classList.remove('active');});chip.classList.add('active');}
     }
     modal.classList.add('open');
     document.body.style.overflow='hidden';
