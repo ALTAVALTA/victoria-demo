@@ -150,13 +150,15 @@ header.topbar.scrolled{box-shadow:0 10px 30px -18px rgba(32,40,31,.35)}
 .rating-meta{font-size:13px;color:var(--muted);line-height:1.35}
 .stars{display:flex;gap:3px;color:var(--gold)}
 .reviews-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:52px}
-.rev-card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:26px 24px;min-height:230px;display:flex;flex-direction:column;gap:16px}
+.reviews-note{margin-top:28px;font-size:12.5px;color:var(--muted);text-align:center;letter-spacing:.02em}
+.rev-card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:26px 24px;min-height:230px;display:flex;flex-direction:column;align-items:center;gap:14px}
 .rev-quote{color:var(--gold);opacity:.8}
 .rev-lines{margin-top:auto;display:flex;flex-direction:column;gap:10px}
 .rev-line{height:10px;border-radius:6px;background:var(--ivory-2)}
 .rev-line.w1{width:90%}.rev-line.w2{width:70%}
-.rev-head{display:flex;align-items:center;gap:12px}
+.rev-head{display:flex;align-items:center;justify-content:center;gap:14px}
 .rev-ava{width:44px;height:44px;border-radius:50%;object-fit:cover;border:1px solid var(--line)}
+.rev-quote{display:block;margin:0 auto 10px;color:var(--gold);opacity:.85}
 .rev-name{font-weight:700;font-size:14px;color:var(--ink)}
 .visit-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:44px;align-items:stretch}
 .visit-card{background:var(--pine);color:#efe9da;border-radius:26px;padding:40px 38px;display:flex;flex-direction:column;gap:26px;box-shadow:0 30px 60px -30px rgba(18,36,26,.6)}
@@ -253,12 +255,13 @@ footer{background:var(--pine-deep);color:#93a08b;padding:34px 0}
   html{scroll-behavior:auto}
 }
 
-.rev-text{font-size:14.5px;line-height:1.55;color:var(--ink);margin:0}
-.rev-meta{display:flex;flex-direction:column;gap:2px}
+.rev-text{font-style:italic;text-align:center;align-self:stretch;font-size:14.5px;line-height:1.55;color:var(--ink);margin:0}
+.rev-level{font-size:10.5px;color:var(--muted);opacity:.75}
+.rev-meta{display:flex;flex-direction:column;gap:2px;font-size:12px;color:var(--muted)}
 .rev-ava{width:44px;height:44px;border-radius:50%;object-fit:cover;border:1px solid var(--line)}
 
-.rev-who{display:flex;flex-direction:column;gap:2px}
-.rev-meta{font-size:12px;color:var(--muted)}
+.rev-who{display:flex;flex-direction:column;align-items:center;gap:3px}
+.rev-meta{display:flex;flex-direction:column;gap:2px;font-size:12px;color:var(--muted)}
 </style>
 </head>
 <body>
@@ -576,7 +579,7 @@ footer{background:var(--pine-deep);color:#93a08b;padding:34px 0}
               <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17l-6.1 3.6 1.4-6.8L2.2 9.1l6.9-.8L12 2z"/></svg>
               <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17l-6.1 3.6 1.4-6.8L2.2 9.1l6.9-.8L12 2z"/></svg>
               <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17l-6.1 3.6 1.4-6.8L2.2 9.1l6.9-.8L12 2z"/></svg>
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" opacity=".35" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17l-6.1 3.6 1.4-6.8L2.2 9.1l6.9-.8L12 2z"/></svg>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17l-6.1 3.6 1.4-6.8L2.2 9.1l6.9-.8L12 2z"/></svg>
             </span>
             рейтинг на<br>Яндекс Картах
           </span>
@@ -585,50 +588,52 @@ footer{background:var(--pine-deep);color:#93a08b;padding:34px 0}
             <!-- @@REVIEWS@@ количество: 4, формат: имя клиента + текст + источник -->
       <div class="reviews-grid">
         <div class="rev-card">
-          <svg class="rev-quote" width="30" height="24" viewBox="0 0 30 24" fill="currentColor" aria-hidden="true"><path d="M0 24V14.4C0 6.4 4.8 1.6 13 0l1.6 4C9.8 5.6 8 8 8 12h5v12H0zm17 0V14.4C17 6.4 21.8 1.6 30 0l-1.6 4C23.8 5.6 22 8 22 12h5v12H17z" transform="scale(0.94)"/></svg>
-          <p class="rev-text">Первый раз была в этом салоне. Небольшой, уютный салон, но главное мастер) приходила за стрелками к Виктории, по рекомендации. Мастер очень хороший, все сделала великолепно, приятный человек, общительная. Хожу, любуюсь теперь стрелками)</p>
+          <svg class="rev-quote" width="34" height="28" viewBox="0 0 30 24" fill="currentColor" aria-hidden="true"><path d="M0 24V14.4C0 6.4 4.8 1.6 13 0l1.6 4C9.8 5.6 8 8 8 12h5v12H0zm17 0V14.4C17 6.4 21.8 1.6 30 0l-1.6 4C23.8 5.6 22 8 22 12h5v12H17z" transform="scale(0.94)"/></svg>
           <div class="rev-head">
             <img class="rev-ava" src="img/avatars/avatar_1.png" alt="Анжелика">
             <div class="rev-who">
               <span class="rev-name">Анжелика</span>
-              <span class="rev-meta">Знаток города 6 уровня &middot; 30 октября 2025</span>
+              <span class="rev-meta"><span class="rev-date">30 октября 2025</span><span class="rev-level">Знаток города 6 уровня</span></span>
             </div>
-          </div>
+          </div><p class="rev-text">Первый раз была в этом салоне. Небольшой, уютный салон, но главное мастер) приходила за стрелками к Виктории, по рекомендации. Мастер очень хороший, все сделала великолепно, приятный человек, общительная. Хожу, любуюсь теперь стрелками)</p>
+          
         </div>
         <div class="rev-card">
-          <svg class="rev-quote" width="30" height="24" viewBox="0 0 30 24" fill="currentColor" aria-hidden="true"><path d="M0 24V14.4C0 6.4 4.8 1.6 13 0l1.6 4C9.8 5.6 8 8 8 12h5v12H0zm17 0V14.4C17 6.4 21.8 1.6 30 0l-1.6 4C23.8 5.6 22 8 22 12h5v12H17z" transform="scale(0.94)"/></svg>
-          <p class="rev-text">Отличный салон. Все мастера улыбчивые и приветливые. Особенно хочется отметить мастера Ольгу. Профессионал своего дела. И покрасит бомбезно, и подстрижет красиво!</p>
+          <svg class="rev-quote" width="34" height="28" viewBox="0 0 30 24" fill="currentColor" aria-hidden="true"><path d="M0 24V14.4C0 6.4 4.8 1.6 13 0l1.6 4C9.8 5.6 8 8 8 12h5v12H0zm17 0V14.4C17 6.4 21.8 1.6 30 0l-1.6 4C23.8 5.6 22 8 22 12h5v12H17z" transform="scale(0.94)"/></svg>
           <div class="rev-head">
             <img class="rev-ava" src="img/avatars/avatar_2.png" alt="Максим Гавриличев">
             <div class="rev-who">
               <span class="rev-name">Максим Гавриличев</span>
-              <span class="rev-meta">Знаток города 3 уровня &middot; 8 октября 2024</span>
+              <span class="rev-meta"><span class="rev-date">8 октября 2024</span><span class="rev-level">Знаток города 3 уровня</span></span>
             </div>
-          </div>
+          </div><p class="rev-text">Отличный салон. Все мастера улыбчивые и приветливые. Особенно хочется отметить мастера Ольгу. Профессионал своего дела. И покрасит бомбезно, и подстрижет красиво!</p>
+          
         </div>
         <div class="rev-card">
-          <svg class="rev-quote" width="30" height="24" viewBox="0 0 30 24" fill="currentColor" aria-hidden="true"><path d="M0 24V14.4C0 6.4 4.8 1.6 13 0l1.6 4C9.8 5.6 8 8 8 12h5v12H0zm17 0V14.4C17 6.4 21.8 1.6 30 0l-1.6 4C23.8 5.6 22 8 22 12h5v12H17z" transform="scale(0.94)"/></svg>
-          <p class="rev-text">Салон посещаю часто! Маникюр, педикюр Настя и Марина супер мастера! РФ лифтинг, косметология. Аня умница. Виктория мастер: губы, брови. Все в одном салоне</p>
+          <svg class="rev-quote" width="34" height="28" viewBox="0 0 30 24" fill="currentColor" aria-hidden="true"><path d="M0 24V14.4C0 6.4 4.8 1.6 13 0l1.6 4C9.8 5.6 8 8 8 12h5v12H0zm17 0V14.4C17 6.4 21.8 1.6 30 0l-1.6 4C23.8 5.6 22 8 22 12h5v12H17z" transform="scale(0.94)"/></svg>
           <div class="rev-head">
             <img class="rev-ava" src="img/avatars/avatar_3.png" alt="Елена Димитриенко">
             <div class="rev-who">
               <span class="rev-name">Елена Димитриенко</span>
-              <span class="rev-meta">Знаток города 5 уровня &middot; 16 апреля 2024</span>
+              <span class="rev-meta"><span class="rev-date">16 апреля 2024</span><span class="rev-level">Знаток города 5 уровня</span></span>
             </div>
-          </div>
+          </div><p class="rev-text">Салон посещаю часто! Маникюр, педикюр Настя и Марина супер мастера! РФ лифтинг, косметология. Аня умница. Виктория мастер: губы, брови. Все в одном салоне</p>
+          
         </div>
         <div class="rev-card">
-          <svg class="rev-quote" width="30" height="24" viewBox="0 0 30 24" fill="currentColor" aria-hidden="true"><path d="M0 24V14.4C0 6.4 4.8 1.6 13 0l1.6 4C9.8 5.6 8 8 8 12h5v12H0zm17 0V14.4C17 6.4 21.8 1.6 30 0l-1.6 4C23.8 5.6 22 8 22 12h5v12H17z" transform="scale(0.94)"/></svg>
-          <p class="rev-text">Услуги косметолога Анны понравились, да и сама она очень приятная девушка</p>
+          <svg class="rev-quote" width="34" height="28" viewBox="0 0 30 24" fill="currentColor" aria-hidden="true"><path d="M0 24V14.4C0 6.4 4.8 1.6 13 0l1.6 4C9.8 5.6 8 8 8 12h5v12H0zm17 0V14.4C17 6.4 21.8 1.6 30 0l-1.6 4C23.8 5.6 22 8 22 12h5v12H17z" transform="scale(0.94)"/></svg>
           <div class="rev-head">
             <img class="rev-ava" src="img/avatars/avatar_4.png" alt="Наталья Б">
             <div class="rev-who">
               <span class="rev-name">Наталья Б</span>
-              <span class="rev-meta">Знаток города 6 уровня &middot; 27 сентября 2024</span>
+              <span class="rev-meta"><span class="rev-date">27 сентября 2024</span><span class="rev-level">Знаток города 6 уровня</span></span>
             </div>
-          </div>
+          </div><p class="rev-text">Услуги косметолога Анны понравились, да и сама она очень приятная девушка</p>
+          
         </div>
       </div>
+    
+      <p class="reviews-note">Отзывы приводятся с сохранением оригинальной пунктуации и орфографии.</p>
     </div>
   </section>
 
