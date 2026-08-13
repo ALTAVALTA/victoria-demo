@@ -844,10 +844,13 @@ document.body.classList.add('js');
   var success=document.getElementById('formSuccess');
   var serviceSelect=document.getElementById('fService');
   var chips=document.querySelectorAll('.chip');
+  var selectedServices=[];
   chips.forEach(function(c){c.addEventListener('click',function(){
-    chips.forEach(function(x){x.classList.remove('active');});
-    c.classList.add('active');
-    serviceSelect.value=c.getAttribute('data-service');
+    c.classList.toggle('active');
+    var svc=c.getAttribute('data-service');
+    var idx=selectedServices.indexOf(svc);
+    if(idx>-1){selectedServices.splice(idx,1);}else{selectedServices.push(svc);}
+    serviceSelect.value=selectedServices.join(', ');
   });});
 
   var dateInput=document.getElementById('fDate');
@@ -861,9 +864,12 @@ document.body.classList.add('js');
     lastFocus=document.activeElement;
     form.hidden=false;success.hidden=true;
     if(service){
-      serviceSelect.value=service;
-      var chip=document.querySelector('.chip[data-service="'+service+'"]');
-      if(chip){chips.forEach(function(x){x.classList.remove('active');});chip.classList.add('active');}
+      if(selectedServices.indexOf(service)===-1){
+        selectedServices.push(service);
+        var chip=document.querySelector('.chip[data-service="'+service+'"]');
+        if(chip){chip.classList.add('active');}
+      }
+      serviceSelect.value=selectedServices.join(', ');
     }
     modal.classList.add('open');
     document.body.style.overflow='hidden';
@@ -873,7 +879,7 @@ document.body.classList.add('js');
     modal.classList.remove('open');
     document.body.style.overflow='';
     if(lastFocus)lastFocus.focus();
-    setTimeout(function(){if(!success.hidden){form.reset();form.hidden=false;success.hidden=true;}},300);
+    setTimeout(function(){if(!success.hidden){form.reset();form.hidden=false;success.hidden=true;selectedServices=[];chips.forEach(function(x){x.classList.remove('active');});serviceSelect.value='';}},300);
   }
   document.querySelectorAll('[data-open-form]').forEach(function(btn){
     btn.addEventListener('click',function(){openModal(btn.getAttribute('data-service'));});
