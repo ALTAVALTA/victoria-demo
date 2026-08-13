@@ -8,6 +8,11 @@
 <style>
 @font-face{font-family:'Jost';font-style:normal;font-weight:600;font-display:swap;src:url(fonts/jost-600.woff2) format('woff2')}
 @font-face{font-family:'Jost';font-style:normal;font-weight:700;font-display:swap;src:url(fonts/jost-700.woff2) format('woff2')}
+
+    .btn .spinner{display:none;width:16px;height:16px;border:2px solid rgba(255,255,255,.35);border-top-color:#fff;border-radius:50%;animation:spin .7s linear infinite;margin-right:8px;vertical-align:-2px}
+    .btn.loading .spinner{display:inline-block}
+    .btn.loading .btn-label{vertical-align:middle}
+    @keyframes spin{to{transform:rotate(360deg)}}
 </style>
 <style>
 :root{
@@ -758,14 +763,14 @@ footer{background:var(--pine-deep);color:#93a08b;padding:34px 0}
         </div>
         <div class="field">
           <label for="fTime">Желаемое время</label>
-          <input id="fTime" name="time" type="time" min="08:30" max="20:30">
+          <input id="fTime" name="time" type="time" min="08:30" max="20:30" step="1800">
         </div>
         <div class="field full">
           <label for="fComment">Комментарий</label>
-          <textarea id="fComment" name="comment" rows="2" placeholder="Пожелания: мастер, услуга, удобное время (необязательно)"></textarea>
+          <textarea id="fComment" name="comment" rows="4" placeholder="Пожелания: мастер, услуга, удобное время (необязательно)"></textarea>
         </div>
         <div class="full">
-          <button class="btn btn-primary" type="submit" style="width:100%">Отправить заявку</button>
+          <button class="btn btn-primary" type="submit" style="width:100%"><span class="spinner" aria-hidden="true"></span><span class="btn-label">Отправить заявку</span></button>
         </div>
       </div>
       <p class="form-note">Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</p>
@@ -845,7 +850,7 @@ document.body.classList.add('js');
     });
     if(!ok)return;
     var btn=form.querySelector('[type=submit]');
-    if(btn){btn.disabled=true;btn.textContent='Отправляем...';}
+    if(btn){btn.disabled=true;btn.classList.add('loading');btn.querySelector('.btn-label').textContent='Отправляем...';}
     var payload={
       name:name.value.trim(),
       phone:phone.value.trim(),
@@ -864,7 +869,7 @@ document.body.classList.add('js');
         try{return JSON.parse(t);}catch(e){return {ok:false,http:r.status,raw:t.slice(0,80)};}
       });
     }).then(function(res){
-      if(btn){btn.disabled=false;btn.textContent='Отправить заявку';}
+      if(btn){btn.disabled=false;btn.classList.remove('loading');btn.querySelector('.btn-label').textContent='Отправить заявку';}
       if(res&&res.ok){
         form.hidden=true;
         success.hidden=false;
@@ -872,7 +877,7 @@ document.body.classList.add('js');
         alert('Не удалось отправить. Позвоните нам: +7 (911) 865-44-60');
       }
     }).catch(function(){
-      if(btn){btn.disabled=false;btn.textContent='Отправить заявку';}
+      if(btn){btn.disabled=false;btn.classList.remove('loading');btn.querySelector('.btn-label').textContent='Отправить заявку';}
       alert('Не удалось отправить. Позвоните нам: +7 (911) 865-44-60');
     });
   });
