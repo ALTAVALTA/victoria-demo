@@ -200,12 +200,14 @@ footer{background:var(--pine-deep);color:#93a08b;padding:34px 0}
 .brand-made{color:#7d8a74;font-family:'Jost',sans-serif;font-size:9.5px;font-weight:500;letter-spacing:.24em;text-transform:lowercase}
 .brand-link{display:inline-flex;align-items:center;text-decoration:none;transition:opacity .3s}
 .brand-link:hover{opacity:.8}
-.brand-name{display:inline-flex;color:#d8d2c2;font-family:'Jost',sans-serif;font-size:12px;font-weight:700;gap:.08em;text-transform:uppercase;line-height:1}
-.brand-name b{font-weight:inherit}
+.brand-name{font-family:var(--font-display);font-size:22px;color:var(--pine);line-height:1}
+.sig-name{display:inline-flex;color:#d8d2c2;font-family:'Jost',sans-serif;font-size:12px;font-weight:700;gap:.08em;text-transform:uppercase;line-height:1}
+.brand-name b,.sig-name b{font-weight:inherit}
 .brand-core{color:var(--gold-bright);animation:v-pulse 2s ease-in-out infinite}
 @keyframes v-pulse{0%,62%{color:var(--gold-bright);text-shadow:none}74%{color:#f5d9a8;text-shadow:0 0 10px rgba(245,217,168,.75)}84%{color:#f7e3b5;text-shadow:0 0 16px rgba(245,217,168,.95)}94%{color:#eccd97;text-shadow:0 0 6px rgba(245,217,168,.5)}100%{color:var(--gold-bright);text-shadow:none}}
-.brand-name{display:inline-flex;color:#d8d2c2;font-family:'Jost',sans-serif;font-size:12px;font-weight:700;gap:.08em;text-transform:uppercase;line-height:1}
-.brand-name b{font-weight:inherit}
+.brand-name{font-family:var(--font-display);font-size:22px;color:var(--pine);line-height:1}
+.sig-name{display:inline-flex;color:#d8d2c2;font-family:'Jost',sans-serif;font-size:12px;font-weight:700;gap:.08em;text-transform:uppercase;line-height:1}
+.brand-name b,.sig-name b{font-weight:inherit}
 .brand-core{color:var(--gold-bright);animation:v-pulse 2s ease-in-out infinite}
 @keyframes v-pulse{0%,62%{color:var(--gold-bright);text-shadow:none}74%{color:#f5d9a8;text-shadow:0 0 10px rgba(245,217,168,.75)}84%{color:#f7e3b5;text-shadow:0 0 16px rgba(245,217,168,.95)}94%{color:#eccd97;text-shadow:0 0 6px rgba(245,217,168,.5)}100%{color:var(--gold-bright);text-shadow:none}}
 .stickybar{display:none}
@@ -708,7 +710,7 @@ footer{background:var(--pine-deep);color:#93a08b;padding:34px 0}
   <div class="container footer-brand">
     <span class="brand-made">created by</span>
     <a class="brand-link" href="https://t.me/ALTAVALTA" target="_blank" rel="noopener">
-      <span class="brand-name"><b>A</b><b>L</b><b>T</b><b>A</b><b class="brand-core">V</b><b>A</b><b>L</b><b>T</b><b>A</b></span>
+      <span class="sig-name"><b>A</b><b>L</b><b>T</b><b>A</b><b class="brand-core">V</b><b>A</b><b>L</b><b>T</b><b>A</b></span>
     </a>
   </div>
 </footer>
