@@ -14,7 +14,7 @@
     .btn.loading .btn-label{vertical-align:middle}
     @keyframes spin{to{transform:rotate(360deg)}}
 
-    .chips{display:flex;flex-direction:column;gap:10px;align-items:center}
+    .chips{display:flex;flex-direction:column;gap:10px}
     .chips-group{display:flex;flex-direction:column;gap:8px;align-items:flex-start;margin-bottom:10px}.chips-group:last-of-type{margin-bottom:0}.chips-cat{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:2px}.chips-cat::after{content:":"}
     .chips-cat{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);min-width:52px}
     .chip{display:inline-block;padding:9px 14px;border-radius:999px;border:1.5px solid var(--line);background:#fff;font-family:var(--font-body);font-size:13.5px;color:var(--ink);cursor:pointer;transition:border-color .2s,background .2s,color .2s;line-height:1.2}
@@ -216,7 +216,7 @@ footer{background:var(--pine-deep);color:#93a08b;padding:34px 0}
 .modal{position:fixed;inset:0;z-index:90;display:flex;align-items:center;justify-content:center;padding:20px;visibility:hidden;opacity:0;transition:opacity .3s,visibility .3s}
 .modal.open{visibility:visible;opacity:1}
 .modal-overlay{position:absolute;inset:0;background:rgba(18,36,26,.62);backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px)}
-.modal-box{position:relative;width:min(560px,100%);max-height:92vh;overflow:auto;background:var(--card);border-radius:26px;padding:36px 34px;box-shadow:0 40px 90px -40px rgba(0,0,0,.6);transform:translateY(18px) scale(.98);transition:transform .35s;text-align:center}
+.modal-box{position:relative;width:min(560px,100%);max-height:92vh;overflow:auto;background:var(--card);border-radius:26px;padding:36px 34px;box-shadow:0 40px 90px -40px rgba(0,0,0,.6);transform:translateY(18px) scale(.98);transition:transform .35s}
 .modal.open .modal-box{transform:none}
 .modal-close{position:absolute;top:16px;right:16px;width:40px;height:40px;border-radius:12px;border:1px solid var(--line);background:var(--ivory);color:var(--pine);font-size:20px;cursor:pointer;transition:.2s}
 .modal-close:hover{background:var(--tint)}
