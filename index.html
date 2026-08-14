@@ -958,15 +958,19 @@ document.body.classList.add('js');
       comment:document.getElementById('fComment')?document.getElementById('fComment').value:'',
       source:'victoria-demo'
     };
+    var ctrl=new AbortController();
+    var timer=setTimeout(function(){ctrl.abort();},20000);
     fetch('https://altavalta-leads.altavalta.workers.dev/',{
       method:'POST',
       headers:{'Content-Type':'application/json','X-Lead-Key':'AV-1UqZW0lEhgXpGRBjkG1TF0yn'},
-      body:JSON.stringify(payload)
+      body:JSON.stringify(payload),
+      signal:ctrl.signal
     }).then(function(r){
       return r.text().then(function(t){
         try{return JSON.parse(t);}catch(e){return {ok:false,http:r.status,raw:t.slice(0,80)};}
       });
     }).then(function(res){
+      clearTimeout(timer);
       if(mySeq!==submitSeq){return;}
       if(btn){btn.disabled=false;btn.classList.remove('loading');btn.querySelector('.btn-label').textContent='Отправить заявку';}
       if(res&&res.ok){
@@ -978,6 +982,7 @@ document.body.classList.add('js');
         alert('Не удалось отправить. Позвоните нам: +7 (911) 865-44-60');
       }
     }).catch(function(){
+      clearTimeout(timer);
       if(mySeq!==submitSeq){return;}
       if(btn){btn.disabled=false;btn.classList.remove('loading');btn.querySelector('.btn-label').textContent='Отправить заявку';}
       submitting=false;
