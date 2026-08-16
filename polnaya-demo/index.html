@@ -1,0 +1,1335 @@
+```html
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Студия красоты «Виктория» — Калининград, Комсомольская 2А | Запись онлайн</title>
+<meta name="description" content="Салон красоты «Виктория» в Калининграде: лазерная эпиляция, маникюр, парикмахерский зал, косметология, перманентный макияж, массаж. Рейтинг 4,4 на Яндекс Картах. Ежедневно 08:30–20:30.">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/prata@5/index.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/manrope@5/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/manrope@5/500.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/manrope@5/600.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/manrope@5/700.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/cormorant@5/500-italic.css">
+<style>
+@font-face{font-family:'Jost';font-style:normal;font-weight:600;font-display:swap;src:url(fonts/jost-600.woff2) format('woff2')}
+@font-face{font-family:'Jost';font-style:normal;font-weight:700;font-display:swap;src:url(fonts/jost-700.woff2) format('woff2')}
+
+:root{
+  --ink:#16281f;
+  --pine:#1e4433;
+  --pine-deep:#132e23;
+  --cream:#f6f0e4;
+  --paper:#fbf7ee;
+  --terra:#b25530;
+  --terra-dark:#98431f;
+  --gold:#c19a5b;
+  --sage:#7a9485;
+  --line:rgba(22,40,31,.16);
+  --shadow:0 18px 50px -18px rgba(22,40,31,.28);
+  --disp:'Prata',serif;
+  --body:'Manrope',sans-serif;
+  --ital:'Cormorant',serif;
+  --rad:14px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--body);
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.6;
+  overflow-x:hidden;
+}
+body::after{
+  content:'';position:fixed;inset:0;z-index:2000;pointer-events:none;opacity:.045;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+button{font-family:inherit;cursor:pointer}
+::selection{background:var(--terra);color:#fff}
+section{scroll-margin-top:92px}
+.wrap{width:min(1180px,92%);margin:0 auto}
+
+/* ---------- photo figures ---------- */
+.ph{position:relative;overflow:hidden;border-radius:var(--rad);background:#e5ddcc}
+.ph img{width:100%;height:100%;object-fit:cover;transform-origin:center}
+.photo-cap{
+  font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;
+  color:rgba(22,40,31,.55);margin-top:.6rem;font-weight:600;
+}
+
+/* ---------- top bar ---------- */
+.topbar{background:var(--pine-deep);color:#d9e4d5;font-size:.8rem}
+.topbar .wrap{display:flex;justify-content:space-between;gap:1rem;padding:.5rem 0}
+.topbar span b{color:var(--gold);font-weight:600}
+.topbar .tb-hide{display:flex;gap:1.4rem}
+
+/* ---------- header ---------- */
+header{
+  position:sticky;top:0;z-index:900;background:rgba(251,247,238,.92);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--line);
+  transition:box-shadow .3s;
+}
+header.scrolled{box-shadow:0 10px 30px -18px rgba(22,40,31,.35)}
+.hdr{display:flex;align-items:center;justify-content:space-between;padding:.8rem 0;gap:1rem}
+.logo{display:flex;flex-direction:column;line-height:1}
+.logo .lg-top{font-size:.6rem;letter-spacing:.42em;text-transform:uppercase;color:var(--terra);font-weight:700;margin-bottom:.2rem}
+.logo .lg-name{font-family:var(--disp);font-size:1.7rem;color:var(--ink)}
+nav.main-nav{display:flex;gap:1.6rem}
+nav.main-nav a{font-size:.85rem;font-weight:600;position:relative;padding:.3rem 0}
+nav.main-nav a::after{content:'';position:absolute;left:0;bottom:0;width:100%;height:2px;background:var(--terra);transform:scaleX(0);transform-origin:right;transition:transform .35s cubic-bezier(.6,0,.2,1)}
+nav.main-nav a:hover::after{transform:scaleX(1);transform-origin:left}
+.hdr-cta{display:flex;align-items:center;gap:1rem}
+.hdr-phone{font-weight:700;font-size:.9rem;white-space:nowrap}
+.hdr-phone small{display:block;font-weight:500;font-size:.65rem;color:var(--sage);letter-spacing:.08em;text-transform:uppercase}
+.btn{
+  display:inline-flex;align-items:center;gap:.55rem;border:none;
+  padding:.85rem 1.7rem;border-radius:999px;font-weight:700;font-size:.9rem;
+  background:var(--terra);color:#fff;letter-spacing:.02em;
+  transition:background .25s,transform .25s,box-shadow .25s;
+}
+.btn:hover{background:var(--terra-dark);transform:translateY(-2px);box-shadow:0 12px 26px -12px rgba(178,85,48,.6)}
+.btn .arr{transition:transform .25s}
+.btn:hover .arr{transform:translateX(4px)}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:var(--cream);box-shadow:0 12px 26px -12px rgba(22,40,31,.5)}
+.btn.light{background:var(--cream);color:var(--ink)}
+.btn.light:hover{background:#fff}
+.burger{display:none;background:none;border:none;width:40px;height:40px;flex-direction:column;justify-content:center;gap:6px;align-items:center}
+.burger span{width:24px;height:2px;background:var(--ink);transition:.3s}
+.m-nav{display:none}
+
+/* ---------- hero ---------- */
+.hero{padding:3.2rem 0 0;position:relative}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:3.5rem;align-items:center}
+.overline{
+  font-size:.72rem;letter-spacing:.34em;text-transform:uppercase;font-weight:700;
+  color:var(--terra);display:flex;align-items:center;gap:.8rem;margin-bottom:1.4rem;
+}
+.overline::before{content:'';width:34px;height:1.5px;background:var(--terra)}
+h1{font-family:var(--disp);font-weight:400;line-height:1.05;color:var(--ink)}
+h1 .h-small{display:block;font-size:clamp(1.2rem,2.6vw,1.9rem);color:var(--pine);margin-bottom:.4rem}
+h1 .h-big{font-size:clamp(3.2rem,7.2vw,6rem);display:block}
+.lm{display:block;overflow:hidden}
+.lm>span{display:block;transform:translateY(110%);animation:rise .9s cubic-bezier(.2,.7,.2,1) forwards}
+.lm.d2>span{animation-delay:.12s}
+.lm.d3>span{animation-delay:.24s}
+@keyframes rise{to{transform:translateY(0)}}
+.hero-sub{margin:1.5rem 0 2rem;max-width:34rem;color:rgba(22,40,31,.78);font-size:1.02rem}
+.hero-sub b{color:var(--ink)}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:1.8rem}
+.rate-chip{
+  display:inline-flex;align-items:center;gap:.7rem;border:1px solid var(--line);
+  border-radius:999px;padding:.55rem 1.1rem;background:#fff;font-size:.85rem;
+}
+.rate-chip .stars{color:var(--gold);letter-spacing:.12em}
+.rate-chip b{font-weight:700}
+.rate-chip .dot{width:3px;height:3px;border-radius:50%;background:var(--line)}
+.hero-vis{position:relative}
+.arch{
+  border-radius:240px 240px 18px 18px;overflow:hidden;aspect-ratio:3/4.1;
+  box-shadow:var(--shadow);outline:1px solid rgba(22,40,31,.12);outline-offset:8px;
+}
+.arch img{width:100%;height:100%;object-fit:cover}
+.kenburns img{animation:kb 16s ease-in-out infinite alternate}
+@keyframes kb{from{transform:scale(1) translateY(0)}to{transform:scale(1.09) translateY(-10px)}}
+.hero-tag{
+  position:absolute;left:-1.4rem;bottom:2rem;background:var(--pine);color:var(--cream);
+  padding:.9rem 1.3rem;border-radius:12px;font-size:.82rem;line-height:1.45;box-shadow:var(--shadow);
+  max-width:230px;
+}
+.hero-tag b{color:var(--gold)}
+.hero-ring{
+  position:absolute;top:-1.6rem;right:-1.4rem;width:112px;height:112px;border-radius:50%;
+  background:var(--cream);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;
+  animation:spin 22s linear infinite;
+}
+.hero-ring svg{width:100%;height:100%}
+.hero-ring text{font-size:9.5px;letter-spacing:.24em;fill:var(--pine);font-family:var(--body);font-weight:700}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hero-ring .ring-v{position:absolute;font-family:var(--disp);font-size:1.3rem;color:var(--terra)}
+
+/* ---------- marquee ---------- */
+.marquee{background:var(--pine-deep);color:var(--cream);overflow:hidden;padding:1rem 0;margin-top:3.4rem;border-top:1px solid rgba(246,240,228,.14);border-bottom:1px solid rgba(246,240,228,.14)}
+.mq-track{display:flex;width:max-content;animation:mq 30s linear infinite}
+.mq-track span{font-family:var(--disp);font-size:1.05rem;white-space:nowrap;padding:0 1.2rem;display:flex;align-items:center;gap:2.4rem}
+.mq-track i{font-style:normal;color:var(--gold);font-size:.8rem}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* ---------- stats ---------- */
+.stats{padding:3.6rem 0 1rem}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--rad);overflow:hidden}
+.stat{background:var(--paper);padding:1.8rem 1.6rem}
+.stat .num{font-family:var(--disp);font-size:2.7rem;color:var(--pine);line-height:1}
+.stat .num em{font-family:var(--ital);font-style:italic;color:var(--terra);font-size:1.6rem}
+.stat p{font-size:.82rem;margin-top:.5rem;color:rgba(22,40,31,.7);font-weight:600;letter-spacing:.04em}
+
+/* ---------- section head ---------- */
+.s-head{display:flex;align-items:flex-end;justify-content:space-between;gap:2rem;margin-bottom:2.8rem;flex-wrap:wrap}
+.kicker{font-size:.72rem;letter-spacing:.34em;text-transform:uppercase;font-weight:700;color:var(--terra);margin-bottom:.9rem;display:block}
+.s-head h2{font-family:var(--disp);font-weight:400;font-size:clamp(1.9rem,3.6vw,2.9rem);line-height:1.15;max-width:34rem}
+.s-head .side{max-width:26rem;color:rgba(22,40,31,.72);font-size:.95rem}
+
+/* ---------- about ---------- */
+.about{padding:4.5rem 0}
+.about-grid{display:grid;grid-template-columns:1.05fr .8fr;gap:3rem;align-items:center}
+.about-imgs{display:grid;grid-template-columns:1.35fr .9fr;gap:1rem;align-items:end}
+.about-imgs .ph{border-radius:var(--rad)}
+.about p.lead{font-size:1.05rem;color:rgba(22,40,31,.85)}
+.about p.lead+p{margin-top:1rem;color:rgba(22,40,31,.7)}
+.about-feats{margin-top:1.6rem;display:grid;gap:.7rem}
+.about-feats li{display:flex;gap:.8rem;align-items:baseline;font-size:.93rem}
+.about-feats li::before{content:'◆';color:var(--terra);font-size:.6rem}
+
+/* ---------- services ---------- */
+.services{padding:4.5rem 0;background:var(--cream);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.svc{
+  background:var(--paper);border:1px solid var(--line);border-radius:var(--rad);
+  overflow:hidden;display:flex;flex-direction:column;
+  transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s;
+}
+.svc:hover{transform:translateY(-8px);box-shadow:var(--shadow)}
+.svc .ph{border-radius:0;aspect-ratio:4/3}
+.svc .ph img{transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.svc:hover .ph img{transform:scale(1.06)}
+.svc-body{padding:1.5rem;display:flex;flex-direction:column;gap:.8rem;flex:1}
+.svc-top{display:flex;justify-content:space-between;align-items:center;gap:.6rem}
+.svc h3{font-family:var(--disp);font-weight:400;font-size:1.35rem}
+.price-tag{background:var(--pine);color:var(--cream);font-size:.74rem;font-weight:700;padding:.3rem .7rem;border-radius:999px;white-space:nowrap;letter-spacing:.03em}
+.svc ul{display:grid;gap:.35rem;font-size:.88rem;color:rgba(22,40,31,.75)}
+.svc ul li::before{content:'—';color:var(--gold);margin-right:.5rem}
+.svc-link{margin-top:auto;padding-top:.9rem;font-weight:700;font-size:.86rem;color:var(--terra);display:inline-flex;gap:.4rem;align-items:center}
+.svc-link:hover .arr{transform:translateX(4px)}
+.svc-link .arr{transition:transform .25s}
+
+/* ---------- laser sticky ---------- */
+.laser{padding:5.5rem 0}
+.laser-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:3.5rem;align-items:start}
+.laser-sticky{position:sticky;top:110px}
+.laser-sticky h2{font-family:var(--disp);font-weight:400;font-size:clamp(2rem,3.8vw,3rem);line-height:1.12;margin:.9rem 0 1.2rem}
+.laser-sticky .sub{color:rgba(22,40,31,.75);margin-bottom:1.6rem;max-width:29rem}
+.zone-list{border-top:1px solid var(--line)}
+.zone-list li{display:flex;justify-content:space-between;align-items:baseline;padding:.75rem 0;border-bottom:1px solid var(--line);font-size:.95rem}
+.zone-list .zn{font-weight:600}
+.zone-list .zp{font-family:var(--disp);color:var(--terra);white-space:nowrap}
+.zone-note{font-size:.78rem;color:rgba(22,40,31,.55);margin-top:.9rem}
+.laser-btns{margin-top:1.6rem;display:flex;gap:.9rem;flex-wrap:wrap}
+.stack{display:grid;gap:1.6rem}
+.stack-card{
+  position:sticky;background:var(--paper);border:1px solid var(--line);border-radius:var(--rad);
+  overflow:hidden;box-shadow:0 -14px 40px -24px rgba(22,40,31,.3);
+}
+.stack-card:nth-child(1){top:100px}
+.stack-card:nth-child(2){top:130px}
+.stack-card:nth-child(3){top:160px}
+.stack-card .ph{border-radius:0;aspect-ratio:1280/845}
+.stack-card .cap{padding:1rem 1.4rem;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.stack-card .cap b{font-family:var(--disp);font-weight:400;font-size:1.05rem}
+.stack-card .cap span{font-size:.75rem;color:var(--sage);font-weight:600;text-transform:uppercase;letter-spacing:.08em}
+.stack-offer{padding:2rem;background:var(--terra);color:#fff}
+.stack-offer .big{font-family:var(--disp);font-size:2.2rem;line-height:1.1}
+.stack-offer p{margin:.7rem 0 1.2rem;font-size:.92rem;opacity:.92}
+
+/* ---------- team gallery ---------- */
+.team{padding:5rem 0;background:var(--pine-deep);color:var(--cream)}
+.team .kicker{color:var(--gold)}
+.team .s-head h2{color:var(--cream)}
+.team .side{color:rgba(246,240,228,.65)}
+.strip-wrap{position:relative}
+.strip{
+  display:flex;gap:1.3rem;overflow-x:auto;padding:.4rem .2rem 1.4rem;cursor:grab;
+  scrollbar-width:none;
+}
+.strip::-webkit-scrollbar{display:none}
+.strip.dragging{cursor:grabbing}
+.strip figure{flex:0 0 auto;width:300px}
+.strip figure.tall .ph{aspect-ratio:861/1280}
+.strip figure.wide .ph{aspect-ratio:1280/847;width:430px}
+.strip figure.wide{width:430px}
+.strip .ph img{transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.strip figure:hover img{transform:scale(1.05)}
+.strip .photo-cap{color:rgba(246,240,228,.6)}
+.strip-nav{display:flex;gap:.6rem;justify-content:flex-end;margin-top:.4rem}
+.strip-nav button{
+  width:46px;height:46px;border-radius:50%;border:1px solid rgba(246,240,228,.35);
+  background:transparent;color:var(--cream);font-size:1.1rem;transition:.25s;
+}
+.strip-nav button:hover{background:var(--cream);color:var(--pine-deep)}
+
+/* ---------- prices ---------- */
+.prices{padding:5rem 0}
+.tabs{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:2rem}
+.tab{
+  border:1.5px solid var(--line);background:transparent;border-radius:999px;
+  padding:.6rem 1.3rem;font-weight:700;font-size:.85rem;color:var(--ink);transition:.25s;
+}
+.tab:hover{border-color:var(--pine)}
+.tab.active{background:var(--pine);border-color:var(--pine);color:var(--cream)}
+.panels .panel{display:none;animation:fadeUp .5s ease}
+.panels .panel.show{display:grid;grid-template-columns:1fr 1fr;gap:0 3.5rem}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.p-row{display:flex;align-items:baseline;gap:.7rem;padding:.85rem 0;border-bottom:1px dashed var(--line);font-size:.95rem}
+.p-row .dots{flex:1;border-bottom:1px dotted rgba(22,40,31,.3);transform:translateY(-4px)}
+.p-row .nm{font-weight:600}
+.p-row .pv{font-family:var(--disp);color:var(--terra);white-space:nowrap}
+.price-note{margin-top:1.6rem;font-size:.8rem;color:rgba(22,40,31,.55)}
+
+/* ---------- reviews ---------- */
+.reviews{padding:5rem 0;background:var(--cream);border-top:1px solid var(--line)}
+.rev-grid{display:grid;grid-template-columns:.85fr 2fr;gap:2.5rem;align-items:start}
+.rev-sum{
+  background:var(--pine);color:var(--cream);border-radius:var(--rad);padding:2.2rem;
+  position:sticky;top:110px;
+}
+.rev-sum .big{font-family:var(--disp);font-size:4.2rem;line-height:1;color:var(--gold)}
+.rev-sum .stars{color:var(--gold);letter-spacing:.2em;margin:.6rem 0 .3rem;font-size:1.1rem}
+.rev-sum p{font-size:.85rem;color:rgba(246,240,228,.75)}
+.rev-sum a{display:inline-block;margin-top:1.2rem;color:var(--cream);font-weight:700;font-size:.85rem;border-bottom:1.5px solid var(--gold);padding-bottom:2px}
+.rev-cards{display:grid;grid-template-columns:1fr 1fr;gap:1.3rem}
+.rev-card{
+  background:var(--paper);border:1px solid var(--line);border-radius:var(--rad);
+  padding:1.6rem;display:flex;flex-direction:column;gap:1rem;
+  transition:transform .3s,box-shadow .3s;
+}
+.rev-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.rev-card .q{font-family:var(--ital);font-style:italic;font-size:1.12rem;line-height:1.5;color:rgba(22,40,31,.9)}
+.rev-card .who{display:flex;align-items:center;gap:.8rem;margin-top:auto}
+.ava{width:38px;height:38px;border-radius:50%;background:var(--pine);color:var(--cream);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.85rem}
+.rev-card .who b{font-size:.88rem;display:block;line-height:1.2}
+.rev-card .who span{font-size:.72rem;color:var(--sage);font-weight:600}
+.rev-card .r-stars{color:var(--gold);font-size:.8rem;letter-spacing:.14em}
+
+/* ---------- street strip ---------- */
+.street{padding:5rem 0}
+.street-row{display:flex;gap:1.2rem;overflow-x:auto;padding-bottom:1rem;scrollbar-width:thin}
+.street-row figure{flex:0 0 auto;width:190px}
+.street-row .ph{aspect-ratio:720/1280;border-radius:120px 120px 12px 12px}
+.street-row figure:nth-child(even){transform:translateY(1.6rem)}
+.street-row .photo-cap{text-align:center}
+
+/* ---------- booking band ---------- */
+.book-band{position:relative;color:#fff;overflow:hidden}
+.book-band .bg{position:absolute;inset:0}
+.book-band .bg img{width:100%;height:100%;object-fit:cover}
+.book-band .bg::after{content:'';position:absolute;inset:0;background:linear-gradient(100deg,rgba(19,46,35,.94) 30%,rgba(19,46,35,.68))}
+.book-inner{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;padding:5rem 0;align-items:center}
+.book-inner h2{font-family:var(--disp);font-weight:400;font-size:clamp(2rem,3.6vw,2.9rem);line-height:1.18;margin-bottom:1.1rem}
+.book-inner .hint{color:rgba(246,240,228,.78);max-width:28rem}
+.book-contacts{margin-top:1.8rem;display:grid;gap:.8rem}
+.book-contacts a{display:flex;gap:.9rem;align-items:center;font-weight:600;font-size:.98rem}
+.book-contacts .ic{width:40px;height:40px;border-radius:50%;background:rgba(246,240,228,.14);display:flex;align-items:center;justify-content:center;font-size:1rem;flex:0 0 auto}
+.book-contacts small{display:block;font-weight:500;font-size:.72rem;color:rgba(246,240,228,.6);text-transform:uppercase;letter-spacing:.08em}
+.form-card{
+  background:var(--paper);color:var(--ink);border-radius:18px;padding:2.2rem;box-shadow:0 30px 70px -25px rgba(0,0,0,.5);
+}
+.form-card h3{font-family:var(--disp);font-weight:400;font-size:1.5rem;margin-bottom:.4rem}
+.form-card .f-sub{font-size:.85rem;color:rgba(22,40,31,.6);margin-bottom:1.4rem}
+.f-field{margin-bottom:1rem}
+.f-field label{display:block;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--pine);margin-bottom:.4rem}
+.f-field input,.f-field select,.f-field textarea{
+  width:100%;padding:.85rem 1rem;border:1.5px solid var(--line);border-radius:10px;
+  font-family:inherit;font-size:.95rem;background:#fff;color:var(--ink);transition:border-color .25s,box-shadow .25s;
+}
+.f-field input:focus,.f-field select:focus,.f-field textarea:focus{outline:none;border-color:var(--terra);box-shadow:0 0 0 3px rgba(178,85,48,.15)}
+.f-field.err input{border-color:#c0392b;animation:shake .35s}
+@keyframes shake{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.f-2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.form-card .btn{width:100%;justify-content:center;padding:1rem}
+.f-note{font-size:.72rem;color:rgba(22,40,31,.5);margin-top:.9rem;text-align:center}
+.success{display:none;text-align:center;padding:2rem 0}
+.success.show{display:block;animation:fadeUp .5s ease}
+.check-ring{width:84px;height:84px;margin:0 auto 1.2rem;border-radius:50%;background:var(--pine);display:flex;align-items:center;justify-content:center}
+.check-ring svg{width:40px;height:40px;stroke:#fff;stroke-width:3;fill:none;stroke-dasharray:60;stroke-dashoffset:60;animation:draw .8s .2s ease forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.success h4{font-family:var(--disp);font-weight:400;font-size:1.6rem;margin-bottom:.5rem}
+.success p{font-size:.9rem;color:rgba(22,40,31,.7)}
+
+/* ---------- contacts ---------- */
+.contacts{padding:5rem 0}
+.c-grid{display:grid;grid-template-columns:.9fr 1.3fr;gap:3rem;align-items:start}
+.c-info{position:sticky;top:110px}
+.c-row{display:flex;gap:1rem;padding:1.1rem 0;border-bottom:1px solid var(--line)}
+.c-row .ic{width:42px;height:42px;border-radius:50%;background:var(--cream);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;flex:0 0 auto;font-size:1.05rem}
+.c-row b{display:block;font-size:.95rem}
+.c-row span{font-size:.82rem;color:rgba(22,40,31,.62)}
+.c-btns{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.6rem}
+.c-mosaic{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:180px;gap:1rem}
+.c-mosaic .m1{grid-column:span 2;grid-row:span 2}
+.c-mosaic .m4{grid-column:span 2}
+.c-mosaic .ph{height:100%;border-radius:12px}
+.c-mosaic .photo-cap{grid-column:span 3}
+
+.footer-brand{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:18px;padding-top:14px;border-top:1px solid rgba(193,154,91,.22);flex-wrap:wrap}
+.brand-made{color:#7d8a74;font-family:'Jost',sans-serif;font-size:9.5px;font-weight:500;letter-spacing:.24em;text-transform:lowercase}
+.brand-link{display:inline-flex;align-items:center;text-decoration:none;transition:opacity .3s}
+.brand-link:hover{opacity:.8}
+.sig-name{display:inline-flex;color:#d8d2c2;font-family:'Jost',sans-serif;font-size:12px;font-weight:700;gap:.08em;text-transform:uppercase;line-height:1}
+.sig-name b{font-weight:inherit}
+.brand-core{color:var(--gold);animation:v-pulse 2s ease-in-out infinite}
+@keyframes v-pulse{0%,62%{color:var(--gold);text-shadow:none}74%{color:#f5d9a8;text-shadow:0 0 10px rgba(245,217,168,.75)}84%{color:#f7e3b5;text-shadow:0 0 16px rgba(245,217,168,.95)}94%{color:var(--gold);text-shadow:none}}
+/* ---------- footer ---------- */
+footer{background:var(--pine-deep);color:rgba(246,240,228,.75);padding:3.5rem 0 2rem;font-size:.88rem}
+.f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:2.5rem;margin-bottom:2.5rem}
+footer .f-logo{font-family:var(--disp);font-size:2rem;color:var(--cream)}
+footer .f-tag{margin-top:.7rem;color:rgba(246,240,228,.55);max-width:22rem}
+footer h5{color:var(--gold);font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;margin-bottom:1rem}
+footer li{margin-bottom:.5rem}
+footer a:hover{color:var(--cream)}
+.f-bottom{border-top:1px solid rgba(246,240,228,.14);padding-top:1.4rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-size:.78rem;color:rgba(246,240,228,.45)}
+
+/* ---------- reveal ---------- */
+.rv{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+
+.demo-ribbon{position:fixed;top:0;left:0;right:0;z-index:120;display:flex;align-items:center;justify-content:center;gap:16px;background:var(--pine-deep);border-bottom:1px solid rgba(193,154,91,.45);padding:10px 16px;color:#efe9da}
+.demo-label{display:inline-flex;align-items:center;gap:10px;font-size:12.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase}
+.demo-label b{color:var(--gold)}
+.demo-label i{width:5px;height:5px;border-radius:50%;background:var(--gold);flex:none}
+.demo-label .dl-sub{color:rgba(246,240,228,.65);font-weight:600}
+.demo-remove{background:transparent;border:1px solid rgba(193,154,91,.55);color:var(--gold);border-radius:999px;padding:6px 16px;font-size:12px;font-weight:600;cursor:pointer;font-family:inherit}
+.demo-remove:hover{background:rgba(193,154,91,.15)}
+body.demo-off .demo-ribbon{display:none}
+header{top:44px}
+body.demo-off header{top:0}
+@media(max-width:680px){.demo-label{font-size:10.5px;letter-spacing:.12em}.demo-label .dl-sub{display:none}.demo-remove{padding:5px 10px;font-size:11px}}
+
+/* ---------- responsive ---------- */
+@media(max-width:1020px){
+  .hero .wrap,.about-grid,.laser-grid,.book-inner,.c-grid,.rev-grid{grid-template-columns:1fr}
+  .laser-sticky,.rev-sum,.c-info{position:static}
+  .svc-grid{grid-template-columns:1fr 1fr}
+  .panels .panel.show{grid-template-columns:1fr}
+  .hero-ring{display:none}
+  nav.main-nav{display:none}
+  .burger{display:flex}
+  .m-nav{display:block;position:fixed;inset:0;top:0;background:var(--paper);z-index:1200;padding:6rem 8% 2rem;transform:translateX(100%);transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+  .m-nav.open{transform:none}
+  .m-nav a{display:block;font-family:var(--disp);font-size:1.7rem;padding:.7rem 0;border-bottom:1px solid var(--line)}
+  .m-close{position:absolute;top:1.4rem;right:8%;background:none;border:none;font-size:2rem;color:var(--ink)}
+}
+@media(max-width:680px){
+  .topbar .tb-hide{display:none}
+  .stats .wrap{grid-template-columns:1fr 1fr}
+  .svc-grid{grid-template-columns:1fr}
+  .rev-cards{grid-template-columns:1fr}
+  .f-grid{grid-template-columns:1fr}
+  .c-mosaic{grid-template-columns:1fr 1fr}
+  .c-mosaic .m1{grid-column:span 2}
+  .c-mosaic .m4{grid-column:span 2}
+  .f-2{grid-template-columns:1fr}
+  .hdr-phone{display:none}
+  .about-imgs{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  html{scroll-behavior:auto}
+  .lm>span{transform:none}
+  .rv{opacity:1;transform:none}
+  .mq-track{animation:none}
+}
+</style>
+</head>
+<body>
+<div class="demo-ribbon" id="demoRibbon" role="note">
+  <span class="demo-label"><b>Демо-версия</b><i></i><span class="dl-sub">сделано для вас </span><b class="dl-love">с любовью</b></span>
+  <button type="button" class="demo-remove" id="demoRemove">Убрать метку</button>
+</div>
+
+<!-- ═══════════ TOP BAR ═══════════ -->
+<div class="topbar">
+  <div class="wrap">
+    <span>Калининград, <b>ул. Комсомольская, 2А</b> · 1 этаж · вход через арку</span>
+    <div class="tb-hide">
+      <span>Ежедневно <b>08:30–20:30</b> · по записи</span>
+      <span><b>+7 (911) 865-44-60</b></span>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════ HEADER ═══════════ -->
+<header id="hdr">
+  <div class="wrap hdr">
+    <a class="logo" href="#top" aria-label="Студия красоты Виктория">
+      <span class="lg-top">студия красоты</span>
+      <span class="lg-name">Виктория</span>
+    </a>
+    <nav class="main-nav" aria-label="Основная навигация">
+      <a href="#services">Услуги</a>
+      <a href="#laser">Эпиляция</a>
+      <a href="#team">Мастера</a>
+      <a href="#prices">Цены</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <div class="hdr-cta">
+      <a class="hdr-phone" href="tel:+79118654460">+7 (911) 865-44-60<small>запись по телефону</small></a>
+      <a class="btn" href="#book">Записаться <span class="arr">→</span></a>
+      <button class="burger" id="burger" aria-label="Открыть меню"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<nav class="m-nav" id="mnav" aria-label="Мобильное меню">
+  <button class="m-close" id="mclose" aria-label="Закрыть меню">×</button>
+  <a href="#services">Услуги</a>
+  <a href="#laser">Лазерная эпиляция</a>
+  <a href="#team">Мастера</a>
+  <a href="#prices">Цены</a>
+  <a href="#reviews">Отзывы</a>
+  <a href="#book">Записаться</a>
+  <a href="#contacts">Контакты</a>
+</nav>
+
+<!-- ═══════════ HERO ═══════════ -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <p class="overline fx-scramble" data-scramble>Калининград · Комсомольская, 2А</p>
+      <h1>
+        <span class="lm"><span class="h-small">Салон красоты · ногтевая студия · парикмахерская</span></span>
+        <span class="lm d2"><span class="h-big">«Виктория»</span></span>
+        <span class="lm d3"><span class="h-small" style="font-family:var(--ital);font-style:italic;color:var(--terra)">красота без суеты</span></span>
+      </h1>
+      <p class="hero-sub">Полный цикл ухода в самом центре Калининграда, рядом с проспектом Мира: <b>волосы, ногти, лазерная эпиляция, косметология, перманентный макияж и массаж</b>. Красный дом, вход через арку — а внутри тишина, свет и забота о вас.</p>
+      <div class="hero-btns">
+        <a class="btn" href="#book">Записаться онлайн <span class="arr">→</span></a>
+        <a class="btn ghost" href="tel:+79118654460">Позвонить</a>
+      </div>
+      <div class="rate-chip">
+        <span class="stars">★★★★☆</span>
+        <b>4,4</b>
+        <span class="dot"></span>
+        рейтинг на Яндекс Картах
+        <span class="dot"></span>
+        24 оценки
+      </div>
+    </div>
+    <div class="hero-vis">
+      <div class="hero-ring" aria-hidden="true">
+        <svg viewBox="0 0 100 100"><defs><path id="circ" d="M50,50 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0"/></defs><text><textPath href="#circ">ЗАПИСЬ ЕЖЕДНЕВНО · 08:30 – 20:30 · ЗАПИСЬ ЕЖЕДНЕВНО ·</textPath></text></svg>
+        <span class="ring-v">В</span>
+      </div>
+      <figure class="ph arch kenburns" style="aspect-ratio:1280/1050">
+        <!-- @@PHOTO:25@@ файл: victoria_photo25.jpg | подпись: Вход в студию «Виктория» на Комсомольской, 2А -->
+        <img src="img/PHOTO_25.jpg" alt="Вход в салон красоты «Виктория»: коричневый дом, белая дверь, зелёные детали" fetchpriority="high">
+      </figure>
+      <p class="photo-cap" style="text-align:center">Уютный вход в студию — нас легко найти</p>
+      <div class="hero-tag">
+        <b>Сегодня запись открыта</b><br>
+        примем в удобное время — работаем без выходных с 08:30
+      </div>
+    </div>
+  </div>
+
+  <!-- marquee -->
+  <div class="marquee" aria-hidden="true">
+    <div class="mq-track">
+      <span>Лазерная эпиляция <i>✦</i> Маникюр и педикюр <i>✦</i> Стрижки и окрашивание <i>✦</i> Перманентный макияж <i>✦</i> Массаж <i>✦</i> Косметология <i>✦</i> Наращивание ресниц <i>✦</i> Коррекция фигуры <i>✦</i></span>
+      <span>Лазерная эпиляция <i>✦</i> Маникюр и педикюр <i>✦</i> Стрижки и окрашивание <i>✦</i> Перманентный макияж <i>✦</i> Массаж <i>✦</i> Косметология <i>✦</i> Наращивание ресниц <i>✦</i> Коррекция фигуры <i>✦</i></span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ STATS ═══════════ -->
+<section class="stats">
+  <div class="wrap">
+    <div class="stat rv"><div class="num" data-count="4.4" data-decimals="1">0,0</div><p>рейтинг на Яндекс Картах</p></div>
+    <div class="stat rv" style="transition-delay:.08s"><div class="num" data-count="24">0</div><p>оценки и отзывы гостей в карточке</p></div>
+    <div class="stat rv" style="transition-delay:.16s"><div class="num" data-count="12">0</div><p>направлений красоты под одной крышей</p></div>
+    <div class="stat rv" style="transition-delay:.24s"><div class="num">7<em>/7</em></div><p>дней в неделю · 08:30–20:30 · по записи</p></div>
+  </div>
+</section>
+
+<!-- ═══════════ ABOUT ═══════════ -->
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="s-head rv">
+      <div>
+        <span class="kicker">Атмосфера</span>
+        <h2>Камерная студия в красном доме — здесь вас знают по имени</h2>
+      </div>
+      <p class="side">Никаких потоков и конвейера: только предварительная запись, спокойный ритм и мастера, которые отвечают за результат.</p>
+    </div>
+    <div class="about-grid">
+      <div class="about-imgs rv">
+        <figure class="ph kenburns" style="aspect-ratio:1280/830">
+          <!-- @@PHOTO:02@@ файл: victoria_photo02.jpg | подпись: Светлый интерьер студии «Виктория» -->
+          <img src="img/PHOTO_02.jpg" alt="Интерьер салона: белые стены, зелёные и жёлтые акценты, современный спокойный дизайн" loading="lazy">
+          <p class="photo-cap" style="padding:.7rem 1rem 1rem">Светлый зал студии</p>
+        </figure>
+        <figure class="ph" style="aspect-ratio:1280/750">
+          <!-- @@PHOTO:06@@ файл: victoria_photo06.jpg | подпись: Наш дом на Комсомольской -->
+          <img src="img/PHOTO_06.jpg" alt="Фасад здания с красной стеной, деревьями и тротуаром" loading="lazy">
+          <p class="photo-cap" style="padding:.7rem 1rem 1rem">Красный дом, зелёный двор</p>
+        </figure>
+      </div>
+      <div class="rv" style="transition-delay:.15s">
+        <p class="lead">«Виктория» — это уютная страна красоты в центре Калининграда. Мы встречаем гостей в тихом дворе на Комсомольской: за белой дверью начинается пространство, где время течёт медленнее.</p>
+        <p>Высокая квалификация мастеров, свежие инструменты и стерильность, профессиональные материалы и честные цены — то, ради чего к нам возвращаются годами и приводят подруг, мам и дочек.</p>
+        <ul class="about-feats">
+          <li>Приём строго по записи — без ожидания в очереди</li>
+          <li>Бесплатная парковка за шлагбаумом во дворе</li>
+          <li>Работаем с женщинами, мужчинами и детьми</li>
+          <li>Мастера регулярно проходят обучение и повышения</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ SERVICES ═══════════ -->
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="s-head rv">
+      <div>
+        <span class="kicker">Услуги</span>
+        <h2>Всё для образа — в одном кабинете красоты</h2>
+      </div>
+      <p class="side">Шесть направлений, чтобы собрать полный уход за один визит: от стрижки до лазерной эпиляции и перманентного макияжа.</p>
+    </div>
+    <div class="svc-grid">
+
+      <article class="svc rv">
+        <figure class="ph" style="aspect-ratio:894/1280;object-fit:cover">
+          <!-- @@PHOTO:20@@ файл: victoria_photo20.jpg | подпись: Стрижка у мастера парикмахерского зала -->
+          <img src="img/PHOTO_20.jpg" alt="Мастер со светлыми волосами в зелёной рубашке и фартуке стрижёт клиента" loading="lazy">
+        </figure>
+        <div class="svc-body">
+          <div class="svc-top"><h3>Парикмахерский зал</h3><span class="price-tag">от 600 ₽</span></div>
+          <ul>
+            <li>Женские и мужские стрижки</li>
+            <li>Окрашивание, шатуш, балаяж</li>
+            <li>Кератиновое выпрямление, полировка</li>
+            <li>Свадебные и вечерние причёски</li>
+          </ul>
+          <a class="svc-link" href="#book">Записаться на волосы <span class="arr">→</span></a>
+        </div>
+      </article>
+
+      <article class="svc rv" style="transition-delay:.08s">
+        <figure class="ph">
+          <!-- @@PHOTO:07@@ файл: victoria_photo07.jpg | подпись: Маникюр в ногтевой студии -->
+          <img src="img/PHOTO_07.jpg" alt="Мастер ногтевого сервиса выполняет маникюр клиенту, насыщенные цвета" loading="lazy">
+        </figure>
+        <div class="svc-body">
+          <div class="svc-top"><h3>Ногтевая студия</h3><span class="price-tag">от 900 ₽</span></div>
+          <ul>
+            <li>Аппаратный и классический маникюр</li>
+            <li>Покрытие гель-лаком — 100+ оттенков</li>
+            <li>Педикюр, в том числе аппаратный</li>
+            <li>Наращивание ногтей гелем и акрилом</li>
+          </ul>
+          <a class="svc-link" href="#book">Записаться на ногти <span class="arr">→</span></a>
+        </div>
+      </article>
+
+      <article class="svc rv" style="transition-delay:.16s">
+        <figure class="ph">
+          <!-- @@PHOTO:08@@ файл: victoria_photo08.jpg | подпись: Кабинет лазерной эпиляции -->
+          <img src="img/PHOTO_08.jpg" alt="Кабинет лазерной эпиляции: белое полотенце, зелёные защитные очки, аппарат" loading="lazy">
+        </figure>
+        <div class="svc-body">
+          <div class="svc-top"><h3>Лазерная эпиляция</h3><span class="price-tag">от 1 500 ₽</span></div>
+          <ul>
+            <li>Все зоны: лицо, подмышки, бикини, ноги</li>
+            <li>Комфортно и безопасно для кожи</li>
+            <li>Курс с заметным результатом</li>
+            <li>Скидка на первый визит</li>
+          </ul>
+          <a class="svc-link" href="#laser">Подробнее о лазерe <span class="arr">→</span></a>
+        </div>
+      </article>
+
+      <article class="svc rv">
+        <figure class="ph" style="aspect-ratio:880/1280">
+          <!-- @@PHOTO:04@@ файл: victoria_photo04.jpg | подпись: Мастер студии за работой -->
+          <img src="img/PHOTO_04.jpg" alt="Мастер в чёрной форме выполняет процедуру клиенту в сером свитере" loading="lazy">
+        </figure>
+        <div class="svc-body">
+          <div class="svc-top"><h3>Перманентный макияж</h3><span class="price-tag">от 7 000 ₽</span></div>
+          <ul>
+            <li>Брови в пудровой технике</li>
+            <li>Губы: акварель и помадный эффект</li>
+            <li>Межресничка и стрелки</li>
+            <li>Удаление старого татуажа лазером</li>
+          </ul>
+          <a class="svc-link" href="#book">Записаться на ПМ <span class="arr">→</span></a>
+        </div>
+      </article>
+
+      <article class="svc rv" style="transition-delay:.08s">
+        <figure class="ph" style="aspect-ratio:900/1280">
+          <!-- @@PHOTO:05@@ файл: victoria_photo05.jpg | подпись: Процедура в светлом кабинете -->
+          <img src="img/PHOTO_05.jpg" alt="Мастера проводят процедуру в светлой комнате с белыми стенами" loading="lazy">
+        </figure>
+        <div class="svc-body">
+          <div class="svc-top"><h3>Косметология</h3><span class="price-tag">от 2 000 ₽</span></div>
+          <ul>
+            <li>Чистки, пилинги, карбоновый пилинг</li>
+            <li>Биоревитализация, anti-age уход</li>
+            <li>Уколы красоты по показаниям</li>
+            <li>Наращивание ресниц и брови</li>
+          </ul>
+          <a class="svc-link" href="#book">Записаться на уход <span class="arr">→</span></a>
+        </div>
+      </article>
+
+      <article class="svc rv" style="transition-delay:.16s">
+        <figure class="ph" style="aspect-ratio:856/1280">
+          <!-- @@PHOTO:17@@ файл: victoria_photo17.jpg | подпись: Аппараты для массажа и коррекции фигуры -->
+          <img src="img/PHOTO_17.jpg" alt="Профессиональное оборудование студии в светлом кабинете" loading="lazy">
+        </figure>
+        <div class="svc-body">
+          <div class="svc-top"><h3>Массаж и фигура</h3><span class="price-tag">от 1 800 ₽</span></div>
+          <ul>
+            <li>Криолиполиз и кавитация (уз-липолиз)</li>
+            <li>Радиолифтинг лица и тела</li>
+            <li>Лимфодренажный, спортивный массаж</li>
+            <li>Антицеллюлитные программы, обёртывания</li>
+          </ul>
+          <a class="svc-link" href="#book">Записаться на массаж <span class="arr">→</span></a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ LASER STICKY ═══════════ -->
+<section class="laser" id="laser">
+  <div class="wrap laser-grid">
+    <div class="laser-sticky rv">
+      <span class="kicker">Флагманская процедура</span>
+      <h2>Лазерная эпиляция: гладкая кожа без боли и раздражения</h2>
+      <p class="sub">Современный диодный лазер, индивидуальные параметры под ваш тип кожи и волос, защитные очки и полная стерильность. Уже после первой процедуры волосы растут медленнее и тоньше.</p>
+      <ul class="zone-list">
+        <li><span class="zn">Подмышечные впадины</span><span class="zp">от 1 500 ₽</span></li>
+        <li><span class="zn">Классическое бикини</span><span class="zp">от 2 000 ₽</span></li>
+        <li><span class="zn">Глубокое бикини</span><span class="zp">от 3 000 ₽</span></li>
+        <li><span class="zn">Голени / бёдра</span><span class="zp">от 2 800 ₽</span></li>
+        <li><span class="zn">Ноги полностью</span><span class="zp">от 5 500 ₽</span></li>
+        <li><span class="zn">Руки полностью</span><span class="zp">от 3 000 ₽</span></li>
+        <li><span class="zn">Лицо (верхняя губа, подбородок)</span><span class="zp">от 1 000 ₽</span></li>
+      </ul>
+      <p class="zone-note">* Точную стоимость под ваш курс подберёт специалист на бесплатной консультации.</p>
+      <div class="laser-btns">
+        <a class="btn" href="#book">Хочу на лазер <span class="arr">→</span></a>
+        <a class="btn ghost" href="tel:+79118654460">Задать вопрос</a>
+      </div>
+    </div>
+    <div class="stack">
+      <div class="stack-card">
+        <figure class="ph">
+          <!-- @@PHOTO:18@@ файл: victoria_photo18.jpg | подпись: Подготовка к сеансу лазерной эпиляции -->
+          <img src="img/PHOTO_18.jpg" alt="Кабинет лазерной эпиляции: розовая подушка, зелёные защитные очки" loading="lazy">
+        </figure>
+        <div class="cap"><b>Комфорт на каждом этапе</b><span>шаг 01</span></div>
+      </div>
+      <div class="stack-card">
+        <figure class="ph">
+          <!-- @@PHOTO:22@@ файл: victoria_photo22.jpg | подпись: Сеанс лазерной эпиляции в студии -->
+          <img src="img/PHOTO_22.jpg" alt="Процедура лазерной эпиляции: клиент в зелёных очках, современное оборудование" loading="lazy">
+        </figure>
+        <div class="cap"><b>Безопасно для любого фототипа</b><span>шаг 02</span></div>
+      </div>
+      <div class="stack-card stack-offer">
+        <div class="big">−30% на первый сеанс</div>
+        <p>Для новых клиентов студии — скидка на первую процедуру лазерной эпиляции любой зоны. Познакомимся, подберём параметры и составим курс.</p>
+        <a class="btn light" href="#book">Забрать скидку <span class="arr">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ TEAM ═══════════ -->
+<section class="team" id="team">
+  <div class="wrap">
+    <div class="s-head rv">
+      <div>
+        <span class="kicker">Команда и атмосфера</span>
+        <h2 style="color:var(--cream)">Мастера, которым доверяют образ всей семьёй</h2>
+      </div>
+      <p class="side">Парикмахеры, nail-мастера, косметологи и мастера эпиляции — слаженная команда, которая любит своё дело. Листайте галерею →</p>
+    </div>
+    <div class="strip-wrap rv">
+      <div class="strip" id="strip">
+        <figure class="wide">
+          <div class="ph">
+            <!-- @@PHOTO:12@@ файл: victoria_photo12.jpg | подпись: Команда студии «Виктория» -->
+            <img src="img/PHOTO_12.jpg" alt="Группа мастеров студии в рабочей форме, тёплые тона, позитивное настроение" loading="lazy">
+          </div>
+          <p class="photo-cap">Наша команда — душа студии</p>
+        </figure>
+        <figure class="wide">
+          <div class="ph">
+            <!-- @@PHOTO:16@@ файл: victoria_photo16.jpg | подпись: Мастера за работой -->
+            <img src="img/PHOTO_16.jpg" alt="Группа мастеров в рабочей обстановке салона" loading="lazy">
+          </div>
+          <p class="photo-cap">Рабочий день в студии</p>
+        </figure>
+        <figure class="wide">
+          <div class="ph">
+            <!-- @@PHOTO:09@@ файл: victoria_photo09.jpg | подпись: Маникюр с характером -->
+            <img src="img/PHOTO_09.jpg" alt="Мастер выполняет маникюр, красный и синий цвета в кадре" loading="lazy">
+          </div>
+          <p class="photo-cap">Маникюр с характером</p>
+        </figure>
+        <figure class="tall">
+          <div class="ph">
+            <!-- @@PHOTO:14@@ файл: victoria_photo14.jpg | подпись: Идеальные руки — наша забота -->
+            <img src="img/PHOTO_14.jpg" alt="Мастер ногтевого сервиса работает с клиентом, оборудование студии" loading="lazy">
+          </div>
+          <p class="photo-cap">Идеальные руки — наша забота</p>
+        </figure>
+      </div>
+      <div class="strip-nav">
+        <button id="stripPrev" aria-label="Назад">←</button>
+        <button id="stripNext" aria-label="Вперёд">→</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ PRICES ═══════════ -->
+<section class="prices" id="prices">
+  <div class="wrap">
+    <div class="s-head rv">
+      <div>
+        <span class="kicker">Прайс-лист</span>
+        <h2>Честные цены без сюрпризов</h2>
+      </div>
+      <p class="side">Ниже — стартовые цены по направлениям. Итоговую стоимость мастер уточнит до начала процедуры.</p>
+    </div>
+    <div class="tabs rv" role="tablist">
+      <button class="tab active" data-tab="p-hair" role="tab">Волосы</button>
+      <button class="tab" data-tab="p-nails" role="tab">Ногти</button>
+      <button class="tab" data-tab="p-face" role="tab">Лицо и ПМ</button>
+      <button class="tab" data-tab="p-body" role="tab">Эпиляция и тело</button>
+    </div>
+    <div class="panels rv">
+      <div class="panel show" id="p-hair">
+        <div>
+          <div class="p-row"><span class="nm">Стрижка женская</span><span class="dots"></span><span class="pv">от 1 200 ₽</span></div>
+          <div class="p-row"><span class="nm">Стрижка мужская</span><span class="dots"></span><span class="pv">от 600 ₽</span></div>
+          <div class="p-row"><span class="nm">Стрижка детская</span><span class="dots"></span><span class="pv">от 500 ₽</span></div>
+          <div class="p-row"><span class="nm">Укладка / локоны</span><span class="dots"></span><span class="pv">от 1 200 ₽</span></div>
+          <div class="p-row"><span class="nm">Свадебная причёска</span><span class="dots"></span><span class="pv">от 3 500 ₽</span></div>
+        </div>
+        <div>
+          <div class="p-row"><span class="nm">Окрашивание в один тон</span><span class="dots"></span><span class="pv">от 2 500 ₽</span></div>
+          <div class="p-row"><span class="nm">Сложное окрашивание (шатуш, балаяж)</span><span class="dots"></span><span class="pv">от 4 500 ₽</span></div>
+          <div class="p-row"><span class="nm">Кератиновое выпрямление</span><span class="dots"></span><span class="pv">от 3 500 ₽</span></div>
+          <div class="p-row"><span class="nm">Полировка волос</span><span class="dots"></span><span class="pv">от 1 500 ₽</span></div>
+          <div class="p-row"><span class="nm">Наращивание волос</span><span class="dots"></span><span class="pv">по запросу</span></div>
+        </div>
+      </div>
+      <div class="panel" id="p-nails">
+        <div>
+          <div class="p-row"><span class="nm">Маникюр классический / аппаратный</span><span class="dots"></span><span class="pv">от 900 ₽</span></div>
+          <div class="p-row"><span class="nm">Комплекс: маникюр + гель-лак</span><span class="dots"></span><span class="pv">от 1 600 ₽</span></div>
+          <div class="p-row"><span class="nm">Педикюр</span><span class="dots"></span><span class="pv">от 1 500 ₽</span></div>
+        </div>
+        <div>
+          <div class="p-row"><span class="nm">Педикюр + гель-лак</span><span class="dots"></span><span class="pv">от 2 000 ₽</span></div>
+          <div class="p-row"><span class="nm">Наращивание ногтей</span><span class="dots"></span><span class="pv">от 3 000 ₽</span></div>
+          <div class="p-row"><span class="nm">Снятие гель-лака</span><span class="dots"></span><span class="pv">от 300 ₽</span></div>
+        </div>
+      </div>
+      <div class="panel" id="p-face">
+        <div>
+          <div class="p-row"><span class="nm">Перманентный макияж губ</span><span class="dots"></span><span class="pv">9 000 ₽</span></div>
+          <div class="p-row"><span class="nm">ПМ бровей, пудровая техника</span><span class="dots"></span><span class="pv">от 7 000 ₽</span></div>
+          <div class="p-row"><span class="nm">Межресничный контур / стрелка</span><span class="dots"></span><span class="pv">от 5 000 ₽</span></div>
+        </div>
+        <div>
+          <div class="p-row"><span class="nm">Чистка лица</span><span class="dots"></span><span class="pv">от 2 000 ₽</span></div>
+          <div class="p-row"><span class="nm">Карбоновый пилинг</span><span class="dots"></span><span class="pv">от 2 500 ₽</span></div>
+          <div class="p-row"><span class="nm">Биоревитализация</span><span class="dots"></span><span class="pv">от 5 000 ₽</span></div>
+        </div>
+      </div>
+      <div class="panel" id="p-body">
+        <div>
+          <div class="p-row"><span class="nm">Лазерная эпиляция: подмышки</span><span class="dots"></span><span class="pv">от 1 500 ₽</span></div>
+          <div class="p-row"><span class="nm">Лазерная эпиляция: бикини глубокое</span><span class="dots"></span><span class="pv">от 3 000 ₽</span></div>
+          <div class="p-row"><span class="nm">Лазерная эпиляция: ноги полностью</span><span class="dots"></span><span class="pv">от 5 500 ₽</span></div>
+        </div>
+        <div>
+          <div class="p-row"><span class="nm">Массаж классический, 60 мин</span><span class="dots"></span><span class="pv">от 1 800 ₽</span></div>
+          <div class="p-row"><span class="nm">Лимфодренажный массаж</span><span class="dots"></span><span class="pv">от 2 200 ₽</span></div>
+          <div class="p-row"><span class="nm">Криолиполиз / кавитация, зона</span><span class="dots"></span><span class="pv">от 2 500 ₽</span></div>
+        </div>
+      </div>
+    </div>
+    <p class="price-note">Актуальный прайс и действующие акции уточняйте у администратора: <a href="tel:+79118654460" style="color:var(--terra);font-weight:700">+7 (911) 865-44-60</a></p>
+  </div>
+</section>
+
+<!-- ═══════════ REVIEWS ═══════════ -->
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <div class="s-head rv">
+      <div>
+        <span class="kicker">Отзывы</span>
+        <h2>Нас рекомендуют подругам — и это лучшая награда</h2>
+      </div>
+    </div>
+    <div class="rev-grid">
+      <aside class="rev-sum rv">
+        <div class="big">4,4</div>
+        <div class="stars">★★★★☆</div>
+        <p>Средняя оценка студии на Яндекс Картах — по 24 оценкам и 7 отзывам гостей.</p>
+        <a href="https://yandex.ru/maps/org/viktoriya/112134720311/" target="_blank" rel="noopener">Читать все отзывы →</a>
+      </aside>
+      <div class="rev-cards">
+<article class="rev-card rv">
+          <span class="r-stars">★★★★★</span>
+          <p class="q">«Первый раз была в этом салоне. Небольшой, уютный, но главное — мастер. Приходила за стрелками к Виктории по рекомендации: всё сделала великолепно, приятный человек, общительная. Хожу, любуюсь теперь стрелками)»</p>
+          <div class="who"><span class="ava" style="background-image:url('img/avatars/avatar_1.jpg');background-size:cover;background-position:center;color:transparent">А</span><div><b>Анжелика</b><span>перманентный макияж · 30 октября 2025</span></div></div>
+        </article>
+<article class="rev-card rv">
+          <span class="r-stars">★★★★★</span>
+          <p class="q">«Отличный салон. Все мастера улыбчивые и приветливые. Особенно хочется отметить мастера Ольгу — профессионал своего дела. И покрасит бомбезно, и подстрижёт красиво!»</p>
+          <div class="who"><span class="ava" style="background-image:url('img/avatars/avatar_2.jpg');background-size:cover;background-position:center;color:transparent">М</span><div><b>Максим Гавриличев</b><span>парикмахерский зал · 8 октября 2024</span></div></div>
+        </article>
+<article class="rev-card rv">
+          <span class="r-stars">★★★★★</span>
+          <p class="q">«Салон посещаю часто! Маникюр и педикюр — Настя и Марина супер-мастера. РФ-лифтинг, косметология — Аня умница. Виктория — губы, брови. Всё в одном салоне!»</p>
+          <div class="who"><span class="ava" style="background-image:url('img/avatars/avatar_3.jpg');background-size:cover;background-position:center;color:transparent">Е</span><div><b>Елена Димитриенко</b><span>ногтевая студия · 16 апреля 2024</span></div></div>
+        </article>
+<article class="rev-card rv">
+          <span class="r-stars">★★★★★</span>
+          <p class="q">«Услуги косметолога Анны понравились, да и сама она очень приятная девушка.»</p>
+          <div class="who"><span class="ava" style="background-image:url('img/avatars/avatar_4.jpg');background-size:cover;background-position:center;color:transparent">Н</span><div><b>Наталья Б</b><span>косметология · 27 сентября 2024</span></div></div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ STREET ═══════════ -->
+<section class="street">
+  <div class="wrap">
+    <div class="s-head rv">
+      <div>
+        <span class="kicker">Как нас найти</span>
+        <h2>Красный дом у проспекта Мира — вы нас не пропустите</h2>
+      </div>
+      <p class="side">Уютная улочка, зелёные деревья и знаменитая парковка с птицами. Вход — внутри арки дома, за белой дверью со стеклом.</p>
+    </div>
+    <div class="street-row rv">
+      <figure>
+        <div class="ph">
+          <!-- @@PHOTO:01@@ файл: victoria_photo01.jpg | подпись: Пешеходная зона у студии -->
+          <img src="img/PHOTO_01.jpg" alt="Городская улица с деревьями и пешеходной зоной в солнечном свете" loading="lazy">
+        </div>
+        <p class="photo-cap">Пешеходная зона рядом</p>
+      </figure>
+      <figure>
+        <div class="ph">
+          <!-- @@PHOTO:03@@ файл: victoria_photo03.jpg | подпись: Улица Комсомольская -->
+          <img src="img/PHOTO_03.jpg" alt="Улица с деревьями и тротуаром у салона" loading="lazy">
+        </div>
+        <p class="photo-cap">Ул. Комсомольская</p>
+      </figure>
+      <figure>
+        <div class="ph">
+          <!-- @@PHOTO:10@@ файл: victoria_photo10.jpg | подпись: Яркий осенний день -->
+          <img src="img/PHOTO_10.jpg" alt="Улица с деревьями и машиной под ярким солнцем, осенний день" loading="lazy">
+        </div>
+        <p class="photo-cap">К нам — в любую погоду</p>
+      </figure>
+      <figure>
+        <div class="ph">
+          <!-- @@PHOTO:15@@ файл: victoria_photo15.jpg | подпись: Дорога к студии -->
+          <img src="img/PHOTO_15.jpg" alt="Улица с деревьями и машиной на заднем плане, осень" loading="lazy">
+        </div>
+        <p class="photo-cap">Осень на Комсомольской</p>
+      </figure>
+      <figure>
+        <div class="ph">
+          <!-- @@PHOTO:19@@ файл: victoria_photo19.jpg | подпись: Зелёная дорожка к входу -->
+          <img src="img/PHOTO_19.jpg" alt="Улица с зелёными деревьями и дорожкой" loading="lazy">
+        </div>
+        <p class="photo-cap">Зелёная дорожка к нам</p>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ BOOKING BAND ═══════════ -->
+<section class="book-band" id="book">
+  <div class="bg" aria-hidden="true">
+    <!-- @@PHOTO:11@@ файл: victoria_photo11.jpg | подпись: Улица в тёплых тонах у студии -->
+    <img src="img/PHOTO_11.jpg" alt="" loading="lazy">
+  </div>
+  <div class="wrap book-inner">
+    <div class="rv">
+      <span class="kicker" style="color:var(--gold)">Запись</span>
+      <h2>Подарите себе час тишины и красоты</h2>
+      <p class="hint">Оставьте заявку — администратор перезвонит в течение 15 минут в рабочее время, подберёт мастера и удобный слот. Запись ведётся ежедневно с 08:30 до 20:30.</p>
+      <div class="book-contacts">
+        <a href="tel:+79118654460"><span class="ic">☎</span><span>+7 (911) 865-44-60<small>основной телефон студии</small></span></a>
+        <a href="https://wa.me/79118654460" target="_blank" rel="noopener"><span class="ic">✆</span><span>+7 (911) 865-44-60<small>WhatsApp · запись к мастеру Виктории</small></span></a>
+        <a href="https://vk.com/viktoriakaliningrad" target="_blank" rel="noopener"><span class="ic">V</span><span>vk.com/viktoriakaliningrad<small>мы ВКонтакте: акции и работы мастеров</small></span></a>
+      </div>
+    </div>
+    <div class="form-card rv" style="transition-delay:.15s">
+      <form id="bookForm" novalidate>
+        <h3>Записаться онлайн</h3>
+        <p class="f-sub">Заполните форму — и место в расписании ваше</p>
+        <div class="f-field" id="fName">
+          <label for="inName">Ваше имя</label>
+          <input type="text" id="inName" name="name" placeholder="Например, Анна" autocomplete="name">
+        </div>
+        <div class="f-field" id="fPhone">
+          <label for="inPhone">Телефон</label>
+          <input type="tel" id="inPhone" name="phone" placeholder="+7 (___) ___-__-__" autocomplete="tel">
+        </div>
+        <div class="f-2">
+          <div class="f-field">
+            <label for="inService">Услуга</label>
+            <select id="inService" name="service">
+              <option>Лазерная эпиляция</option>
+              <option>Маникюр / педикюр</option>
+              <option>Стрижка / окрашивание</option>
+              <option>Перманентный макияж</option>
+              <option>Косметология</option>
+              <option>Массаж / коррекция фигуры</option>
+              <option>Ресницы / брови</option>
+              <option>Другое / консультация</option>
+            </select>
+          </div>
+          <div class="f-field">
+            <label for="inDate">Желаемая дата</label>
+            <input type="date" id="inDate" name="date">
+          </div>
+        </div>
+        <div class="f-field">
+          <label for="inComment">Комментарий (необязательно)</label>
+          <textarea id="inComment" name="comment" rows="2" placeholder="Удобное время, пожелания…"></textarea>
+        </div>
+        <button type="submit" class="btn" id="submitBtn">Отправить заявку <span class="arr">→</span></button>
+        <p class="f-note">Нажимая кнопку, вы соглашаетесь с обработкой персональных данных</p>
+      </form>
+      <div class="success" id="successBox">
+        <div class="check-ring"><svg viewBox="0 0 40 40"><path d="M8 21 L17 30 L33 11"/></svg></div>
+        <h4>Заявка принята!</h4>
+        <p id="successText">Спасибо! Администратор перезвонит вам в течение 15 минут в рабочее время (08:30–20:30) и подтвердит запись.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ CONTACTS ═══════════ -->
+<section class="contacts" id="contacts">
+  <div class="wrap">
+    <div class="s-head rv">
+      <div>
+        <span class="kicker">Контакты</span>
+        <h2>Ждём вас в самом центре Калининграда</h2>
+      </div>
+    </div>
+    <div class="c-grid">
+      <div class="c-info rv">
+        <div class="c-row">
+          <span class="ic">📍</span>
+          <div><b>Калининград, ул. Комсомольская, 2А</b><span>Центральный район, 1 этаж · рядом с проспектом Мира</span></div>
+        </div>
+        <div class="c-row">
+          <span class="ic">🚪</span>
+          <div><b>Вход внутри арки дома</b><span>одна светлая дверь со стеклом — заходите, мы рады</span></div>
+        </div>
+        <div class="c-row">
+          <span class="ic">🅿</span>
+          <div><b>Бесплатная парковка</b><span>во дворе за шлагбаумом — место для клиентов всегда найдётся</span></div>
+        </div>
+        <div class="c-row">
+          <span class="ic">🕗</span>
+          <div><b>Ежедневно 08:30–20:30</b><span>приём по предварительной записи, без выходных</span></div>
+        </div>
+        <div class="c-row">
+          <span class="ic">☎</span>
+          <div><b>+7 (911) 865-44-60</b><span>WhatsApp: +7 (911) 865-44-60</span></div>
+        </div>
+        <div class="c-btns">
+          <a class="btn" href="https://yandex.ru/maps/org/viktoriya/112134720311/" target="_blank" rel="noopener">Построить маршрут <span class="arr">→</span></a>
+          <a class="btn ghost" href="tel:+79118654460">Позвонить</a>
+        </div>
+      </div>
+      <div class="c-mosaic rv" style="transition-delay:.12s">
+        <figure class="ph m1 kenburns">
+          <!-- @@PHOTO:24@@ файл: victoria_photo24.jpg | подпись: Красный дом студии «Виктория» -->
+          <img src="img/PHOTO_24.jpg" alt="Красный дом с зелёными деревьями и каменным бордюром" loading="lazy">
+        </figure>
+        <figure class="ph">
+          <!-- @@PHOTO:26@@ файл: victoria_photo26.jpg | подпись: Белая дверь с вывеской Beauty Studio Viktoria -->
+          <img src="img/PHOTO_26.jpg" alt="Красный дом с белым входом и надписью Beauty Studio Viktoria" loading="lazy">
+        </figure>
+        <figure class="ph">
+          <!-- @@PHOTO:21@@ файл: victoria_photo21.jpg | подпись: Вход в салон — добро пожаловать -->
+          <img src="img/PHOTO_21.jpg" alt="Вход в салон Beauty Studio Viktoria, коричневый фасад с зелёными деталями" loading="lazy">
+        </figure>
+        <figure class="ph m4">
+          <!-- @@PHOTO:23@@ файл: victoria_photo23.jpg | подпись: Вывеска студии на Комсомольской -->
+          <img src="img/PHOTO_23.jpg" alt="Здание с вывеской Beauty Studio Viktoria" loading="lazy">
+        </figure>
+        <figure class="ph" style="grid-column:span 2">
+          <!-- @@PHOTO:13@@ файл: victoria_photo13.jpg | подпись: Парковка для гостей во дворе -->
+          <img src="img/PHOTO_13.jpg" alt="Парковка с птицами на зелёном фоне у салона" loading="lazy">
+        </figure>
+        <p class="photo-cap">Наш дом, вывеска и парковка для гостей — всё в одном дворе</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <div class="f-logo">Виктория</div>
+        <p class="f-tag">Студия красоты в Калининграде: волосы, ногти, лазерная эпиляция, косметология, перманентный макияж и массаж. Доверьте свою красоту профессионалам.</p>
+      </div>
+      <div>
+        <h5>Навигация</h5>
+        <ul>
+          <li><a href="#services">Услуги</a></li>
+          <li><a href="#laser">Лазерная эпиляция</a></li>
+          <li><a href="#prices">Цены</a></li>
+          <li><a href="#reviews">Отзывы</a></li>
+          <li><a href="#book">Запись онлайн</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Контакты</h5>
+        <ul>
+          <li>Калининград, ул. Комсомольская, 2А</li>
+          <li><a href="tel:+79118654460">+7 (911) 865-44-60</a></li>
+          <li>Ежедневно 08:30–20:30</li>
+          <li><a href="https://vk.com/viktoriakaliningrad" target="_blank" rel="noopener">ВКонтакте</a> · <a href="https://wa.me/79118654460" target="_blank" rel="noopener">WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <span>© <span id="year">2025</span> Студия красоты «Виктория», Калининград</span>
+      <span>Имеются противопоказания. Необходима консультация специалиста.</span>
+    </div>
+  </div>
+<div class="footer-brand">
+    <span class="brand-made">created by</span>
+    <a class="brand-link" href="https://t.me/ALTAVALTA" target="_blank" rel="noopener">
+      <span class="sig-name"><b>A</b><b>L</b><b>T</b><b>A</b><b class="brand-core">V</b><b>A</b><b>L</b><b>T</b><b>A</b></span>
+    </a>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var demo = document.getElementById('demoRibbon');
+  var demoBtn = document.getElementById('demoRemove');
+  if (demo && demoBtn){
+    demoBtn.addEventListener('click', function(){
+      document.body.classList.add('demo-off');
+    });
+  }
+
+  /* header shadow */
+  var hdr = document.getElementById('hdr');
+  window.addEventListener('scroll', function(){
+    hdr.classList.toggle('scrolled', window.scrollY > 12);
+  }, {passive:true});
+
+  /* mobile menu */
+  var mnav = document.getElementById('mnav');
+  document.getElementById('burger').addEventListener('click', function(){ mnav.classList.add('open'); });
+  document.getElementById('mclose').addEventListener('click', function(){ mnav.classList.remove('open'); });
+  mnav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ mnav.classList.remove('open'); }); });
+
+  /* reveal on scroll */
+  var rvEls = document.querySelectorAll('.rv');
+  if (reduced || !('IntersectionObserver' in window)) {
+    rvEls.forEach(function(el){ el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+      });
+    }, {threshold:.12, rootMargin:'0px 0px -40px 0px'});
+    rvEls.forEach(function(el){ io.observe(el); });
+  }
+
+  /* scramble-decode overline */
+  var sc = document.querySelectorAll('[data-scramble]');
+  sc.forEach(function(el){
+    var txt = el.textContent;
+    if (reduced) return;
+    var pool = 'ВИКТОРЯКМНСА·—◆0123456789';
+    var frame = 0, total = 34;
+    var iv = setInterval(function(){
+      frame++;
+      var out = '';
+      for (var i=0;i<txt.length;i++){
+        if (txt[i]===' '||txt[i]==='·') { out+=txt[i]; continue; }
+        var reveal = (frame/total)*txt.length;
+        out += i < reveal ? txt[i] : pool[Math.floor(Math.random()*pool.length)];
+      }
+      el.textContent = out;
+      if (frame>=total){ el.textContent = txt; clearInterval(iv); }
+    }, 40);
+  });
+
+  /* counters */
+  var nums = document.querySelectorAll('[data-count]');
+  function animateNum(el){
+    var target = parseFloat(el.dataset.count);
+    var dec = parseInt(el.dataset.decimals||'0',10);
+    if (reduced){ el.textContent = target.toFixed(dec).replace('.',','); return; }
+    var t0 = null, dur = 1400;
+    function step(ts){
+      if(!t0) t0 = ts;
+      var p = Math.min((ts-t0)/dur, 1);
+      var eased = 1 - Math.pow(1-p, 3);
+      el.textContent = (target*eased).toFixed(dec).replace('.',',');
+      if (p<1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  if ('IntersectionObserver' in window && !reduced) {
+    var nio = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (en.isIntersecting){ animateNum(en.target); nio.unobserve(en.target); }
+      });
+    }, {threshold:.5});
+    nums.forEach(function(n){ nio.observe(n); });
+  } else {
+    nums.forEach(animateNum);
+  }
+
+  /* price tabs */
+  var tabs = document.querySelectorAll('.tab');
+  tabs.forEach(function(t){
+    t.addEventListener('click', function(){
+      tabs.forEach(function(x){ x.classList.remove('active'); });
+      t.classList.add('active');
+      document.querySelectorAll('.panel').forEach(function(p){ p.classList.remove('show'); });
+      document.getElementById(t.dataset.tab).classList.add('show');
+    });
+  });
+
+  /* team strip: drag + arrows */
+  var strip = document.getElementById('strip');
+  if (strip){
+    var down=false, startX=0, startLeft=0;
+    strip.addEventListener('pointerdown', function(e){
+      down=true; startX=e.clientX; startLeft=strip.scrollLeft;
+      strip.classList.add('dragging'); strip.setPointerCapture(e.pointerId);
+    });
+    strip.addEventListener('pointermove', function(e){
+      if(!down) return;
+      strip.scrollLeft = startLeft - (e.clientX - startX);
+    });
+    ['pointerup','pointercancel','pointerleave'].forEach(function(ev){
+      strip.addEventListener(ev, function(){ down=false; strip.classList.remove('dragging'); });
+    });
+    document.getElementById('stripPrev').addEventListener('click', function(){ strip.scrollBy({left:-340, behavior: reduced?'auto':'smooth'}); });
+    document.getElementById('stripNext').addEventListener('click', function(){ strip.scrollBy({left:340, behavior: reduced?'auto':'smooth'}); });
+  }
+
+  /* form */
+  var form = document.getElementById('bookForm');
+  var dateInput = document.getElementById('inDate');
+  var today = new Date();
+  var iso = today.getFullYear() + '-' + String(today.getMonth()+1).padStart(2,'0') + '-' + String(today.getDate()).padStart(2,'0');
+  dateInput.min = iso;
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var nameBox = document.getElementById('fName');
+    var phoneBox = document.getElementById('fPhone');
+    var name = document.getElementById('inName').value.trim();
+    var phone = document.getElementById('inPhone').value.trim();
+    var ok = true;
+    nameBox.classList.remove('err'); phoneBox.classList.remove('err');
+    if (name.length < 2){ nameBox.classList.add('err'); ok=false; }
+    var digits = phone.replace(/\D/g,'');
+    if (digits.length < 10){ phoneBox.classList.add('err'); ok=false; }
+    if (!ok) return;
+
+    // Демо-защита: с локального/непродового хоста заявка НЕ уходит в воркер
+    var prodHosts = ['altavalta.github.io'];
+    var host = window.location.hostname || '';
+    var isDemoPath = window.location.pathname.indexOf('/polnaya-demo') === 0;
+    var isLocal = (host === 'localhost' || host === '127.0.0.1' || host === '' || window.location.protocol === 'file:');
+    if (isLocal || isDemoPath || prodHosts.indexOf(host) === -1) {
+      alert('Демо-режим: заявка не отправляется. На боевом сайте она уйдёт администратору.\n\n' + name + ', ' + phone + ' — ' + document.getElementById('inService').value);
+      return;
+    }
+
+    var payload = {
+      name: name,
+      phone: phone,
+      service: document.getElementById('inService').value,
+      date: document.getElementById('inDate').value,
+      time: '',
+      comment: document.getElementById('inComment').value.trim(),
+      source: 'victoria-demo'
+    };
+    var btn = document.getElementById('submitBtn');
+    btn.disabled = true; btn.textContent = 'Отправляем…';
+    var ctrl = new AbortController();
+    var timer = setTimeout(function(){ ctrl.abort(); }, 20000);
+    fetch('https://altavalta-leads.altavalta.workers.dev/', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json', 'X-Lead-Key': 'AV-1UqZW0lEhgXpGRBjkG1TF0yn'},
+      body: JSON.stringify(payload),
+      signal: ctrl.signal
+    }).then(function(r){
+      return r.text().then(function(t){
+        try{return JSON.parse(t);}catch(e){return {ok:false,http:r.status,raw:t.slice(0,80)};}
+      });
+    }).then(function(res){
+      clearTimeout(timer);
+      if (res && res.ok){
+        form.style.display = 'none';
+        var s = document.getElementById('successBox');
+        s.classList.add('show');
+        document.getElementById('successText').textContent = 'Спасибо, ' + name + '! Администратор перезвонит вам в течение 15 минут в рабочее время (08:30–20:30) и подтвердит запись.';
+      } else {
+        btn.disabled = false; btn.textContent = 'Отправить заявку →';
+        alert('Не удалось отправить заявку. Позвоните нам: +7 (911) 865-44-60');
+      }
+    }).catch(function(){
+      clearTimeout(timer);
+      btn.disabled = false; btn.textContent = 'Отправить заявку →';
+      alert('Не удалось отправить заявку. Позвоните нам: +7 (911) 865-44-60');
+    });
+  });
+
+  /* phone mask light */
+  document.getElementById('inPhone').addEventListener('input', function(e){
+    var d = e.target.value.replace(/\D/g,'');
+    if (d.length && d[0]==='8') d = '7' + d.slice(1);
+    if (d.length && d[0]!=='7') d = '7' + d;
+    d = d.slice(0,11);
+    var out = '';
+    if (d.length) out = '+' + d[0];
+    if (d.length>1) out += ' (' + d.slice(1,4);
+    if (d.length>=4) out += ') ' + d.slice(4,7);
+    if (d.length>=7) out += '-' + d.slice(7,9);
+    if (d.length>=9) out += '-' + d.slice(9,11);
+    e.target.value = out;
+  });
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
+```
