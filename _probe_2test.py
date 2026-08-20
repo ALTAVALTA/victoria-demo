@@ -1,0 +1,22 @@
+# -*- coding: utf-8 -*-
+import io, re, sys
+sys.stdout.reconfigure(encoding='utf-8')
+p = r'C:\Users\PORTAL\.openclaw\workspace\landings\victoria\2TEST_TOJE_SAMOE_POLNAYA.html'
+t = io.open(p, encoding='utf-8').read()
+print('LEN', len(t))
+print('=== НАЧАЛО (первые 500) ===')
+print(repr(t[:500]))
+print()
+print('=== КОНЕЦ (последние 500) ===')
+print(repr(t[-500:]))
+print()
+print('=== МАРКЕРЫ ===')
+print('@@PHOTO:', len(re.findall(r'@@PHOTO', t)))
+print('@@REVIEWS:', len(re.findall(r'@@REVIEWS', t)))
+print('@@SIGNATURE:', len(re.findall(r'@@SIGNATURE', t)))
+print('img PHOTO:', len(re.findall(r'img/PHOTO_', t)))
+print('img src=', len(re.findall(r'<img', t)))
+print()
+print('=== СЕКЦИИ ===')
+secs = re.findall(r'<section[^>]*id="([^"]+)"|<section[^>]*class="([^"]+)"', t)
+print(secs[:30])

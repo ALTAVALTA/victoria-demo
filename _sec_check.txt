@@ -1,0 +1,36 @@
+=== НАЙДЕНО: 'Хочу как здесь' на позиции 28759 ===
+ссаж</span><i></i><span>Наращивание ресниц</span><i></i><span>Запись по времени</span><i></i>
+      </div>
+    </div>
+  </div>
+
+  <section class="section" id="works">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="overline">Работы студии</span>
+        <h2>«Хочу как здесь» — нажмите на фото</h2>
+        <p class="lead">Реальные работы мастеров «Виктории». Нажмите «Хочу так» — откроется форма записи с уже выбранной услугой.</p>
+      </div>
+      <div class="works-grid">
+        <article class="work-card reveal">
+          <!-- @@PHOTO:work_mani@@ описание: аппаратный маникюр, мастер обрабатывает ногти клиента, яркие красные оттенки лака; файл: victoria_photo09.jpg -->
+          <div class="img-wrap ar-mani"><img src="img/PHOTO_work_mani.jpg" alt="Маникюр с покрытием гель-лак в студии «Виктория»"></div>
+          <div class="work-body">
+            <h3>Маникюр и гель-лак</h3>
+            <p>Аппаратный маникюр, ровное покрытие и цвет, который держится неделями. Обработка инструмента и одноразовые расходники — по умолчанию.</p>
+            <div class="work-foot">
+              <span class="work-price">от 1 500 ₽</span>
+              <button class="btn-want" type="button" data-open-form data-service="Маникюр и гель-лак">Хочу так</button>
+            </div>
+          </div>
+        </article>
+        <article class="work-card reveal">
+          <!-- @@PHOTO:work_hair@@ описание: мастер-парикмахер со светлыми волосами в зелёной рубашке и фартуке стрижёт клиента ножницами и расчёской; файл: victoria_photo20.jpg -->
+          <div class="img-wrap ar-hair"><img src="img/PHOTO_work_hair.jpg" alt="Стрижка в студии «Виктория»"></div>
+          <div class="work-body">
+            <h3>Стрижки и окрашивание</h3>
+            <p>Женские, мужские и детские стрижки, окрашивание и укладки. Мастер подбирает форму и тон под вас, а не «по каталогу».</p>
+            <div class="work-foot">
+              <span class="work-price">от 1 500 ₽</span>
+              <button class="btn-want" type="button" data-open-form data-service="Стрижка женская">Хоч
+

@@ -1,0 +1,14 @@
+=== ВСЕ ВХОЖДЕНИЯ 'галере' (без учёта регистра) ===
+--- позиция 43942 ---
+<div class="container">       <div class="section-head reveal">         <span class="overline">Атмосфера</span>         <h2>Загляните к нам в гости</h2>         <p class="lead">Светлые кабинеты, спокойная обстановка и уютные рабочие места — листайте галерею.</p>       </div>       <div class="gallery-strip reveal">         <div class="gallery-item g-h"><img src="img/PHOTO_gallery_1.jpg" alt="Вход в студию «Виктория»" loading="lazy"></div>         <div class="gallery-item g-v"><img src="img/PHOTO_gallery_2.jpg" alt="Процедура в студии «Виктория»" loading="lazy"></div>         <div class="gallery-item
+
+
+=== ВСЕ ВХОЖДЕНИЯ 'листай' ===
+--- позиция 43933 ---
+"section-head reveal">         <span class="overline">Атмосфера</span>         <h2>Загляните к нам в гости</h2>         <p class="lead">Светлые кабинеты, спокойная обстановка и уютные рабочие места — листайте галерею.</p>       </div>       <div class="gallery-strip reveal">         <div class="gallery-item g-h"><img src="img/PHOTO_gallery_1.jpg" alt="Вход в студию «Виктория»" loading="lazy"></div>         <div class="gallery-item g-v"><img src="img/PHOTO_gallery_2.jpg" alt="Процедура в студии «Виктор
+
+
+=== ВСЕ ВХОЖДЕНИЯ 'Загляните' ===
+--- позиция 43816 ---
+tyle="padding-top:0">     <div class="container">       <div class="section-head reveal">         <span class="overline">Атмосфера</span>         <h2>Загляните к нам в гости</h2>         <p class="lead">Светлые кабинеты, спокойная обстановка и уютные рабочие места — листайте галерею.</p>       </div>       <div class="gallery-strip reveal">         <div class="gallery-item g-h"><img src="img/PHOTO_gallery_1.jpg" alt="Вход в студию «Виктория»" loading="lazy"></div>         <div class="gallery-item g-v"><img src="img/PHOTO_gallery_2.jpg" alt="Процедура в 
+

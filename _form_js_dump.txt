@@ -1,0 +1,122 @@
+﻿
+document.body.classList.add('js');
+(function(){
+  var header=document.getElementById('topbar');
+  var onScroll=function(){header.classList.toggle('scrolled',window.scrollY>8);};
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+  var demo=document.getElementById('demoRibbon');
+  var demoBtn=document.getElementById('demoRemove');
+  if(demo&&demoBtn){
+    demoBtn.addEventListener('click',function(){
+      document.body.classList.add('demo-off');
+      document.documentElement.style.scrollPaddingTop='96px';
+    });
+  }
+
+  var modal=document.getElementById('modal');
+  var form=document.getElementById('bookForm');
+  var success=document.getElementById('formSuccess');
+  var serviceSelect=document.getElementById('fService');
+  var chips=document.querySelectorAll('.chip');
+  var selectedServices=[];
+  chips.forEach(function(c){c.addEventListener('click',function(){
+    c.classList.toggle('active');
+    var svc=c.getAttribute('data-service');
+    var idx=selectedServices.indexOf(svc);
+    if(idx>-1){selectedServices.splice(idx,1);}else{selectedServices.push(svc);}
+    serviceSelect.value=selectedServices.join(', ');
+  });});
+
+  var dateInput=document.getElementById('fDate');
+  var lastFocus=null;
+
+  var today=new Date();
+  var iso=today.getFullYear()+'-'+String(today.getMonth()+1).padStart(2,'0')+'-'+String(today.getDate()).padStart(2,'0');
+  dateInput.min=iso;
+
+  function openModal(service){
+    lastFocus=document.activeElement;
+    form.hidden=false;success.hidden=true;
+    if(service){
+      if(selectedServices.indexOf(service)===-1){
+        selectedServices.push(service);
+        var chip=document.querySelector('.chip[data-service="'+service+'"]');
+        if(chip){chip.classList.add('active');}
+      }
+      serviceSelect.value=selectedServices.join(', ');
+    }
+    modal.classList.add('open');
+    document.body.style.overflow='hidden';
+    setTimeout(function(){var el=document.getElementById('fName');if(el&&!el.closest('[hidden]'))el.focus();},250);
+  }
+  function closeModal(){
+    modal.classList.remove('open');
+    document.body.style.overflow='';
+    if(lastFocus)lastFocus.focus();
+    setTimeout(function(){if(!success.hidden){form.reset();form.hidden=false;success.hidden=true;selectedServices=[];chips.forEach(function(x){x.classList.remove('active');});serviceSelect.value='';}},300);
+  }
+  document.querySelectorAll('[data-open-form]').forEach(function(btn){
+    btn.addEventListener('click',function(){openModal(btn.getAttribute('data-service'));});
+  });
+  document.querySelectorAll('[data-close-form]').forEach(function(el){
+    el.addEventListener('click',closeModal);
+  });
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'&&modal.classList.contains('open'))closeModal();
+  });
+
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var name=document.getElementById('fName');
+    var phone=document.getElementById('fPhone');
+    var ok=true;
+    [name,phone].forEach(function(inp){
+      var valid=inp.value.trim().length>=2;
+      if(inp===phone)valid=(inp.value.replace(/\D/g,'').length>=10);
+      inp.style.borderColor=valid?'':'#c0533f';
+      if(!valid)ok=false;
+    });
+    if(!ok)return;
+    var btn=form.querySelector('[type=submit]');
+    if(btn){btn.disabled=true;btn.classList.add('loading');btn.querySelector('.btn-label').textContent='╨Ю╤В╨┐╤А╨░╨▓╨╗╤П╨╡╨╝...';}
+    var payload={
+      name:name.value.trim(),
+      phone:phone.value.trim(),
+      service:selectedServices.length?selectedServices.join(', '):'╨Ф╤А╤Г╨│╨╛╨╡ / ╨┐╨╛╨┤╤Б╨║╨░╨╢╨╡╤В ╨░╨┤╨╝╨╕╨╜╨╕╤Б╤В╤А╨░╤В╨╛╤А',
+      date:document.getElementById('fDate')?document.getElementById('fDate').value:'',
+      time:document.getElementById('fTime')?document.getElementById('fTime').value:'',
+      comment:document.getElementById('fComment')?document.getElementById('fComment').value:'',
+      source:'victoria-demo'
+    };
+    fetch('https://altavalta-leads.altavalta.workers.dev/',{
+      method:'POST',
+      headers:{'Content-Type':'application/json','X-Lead-Key':'AV-1UqZW0lEhgXpGRBjkG1TF0yn'},
+      body:JSON.stringify(payload)
+    }).then(function(r){
+      return r.text().then(function(t){
+        try{return JSON.parse(t);}catch(e){return {ok:false,http:r.status,raw:t.slice(0,80)};}
+      });
+    }).then(function(res){
+      if(btn){btn.disabled=false;btn.classList.remove('loading');btn.querySelector('.btn-label').textContent='╨Ю╤В╨┐╤А╨░╨▓╨╕╤В╤М ╨╖╨░╤П╨▓╨║╤Г';}
+      if(res&&res.ok){
+        form.hidden=true;
+        success.hidden=false;
+      }else{
+        alert('╨Э╨╡ ╤Г╨┤╨░╨╗╨╛╤Б╤М ╨╛╤В╨┐╤А╨░╨▓╨╕╤В╤М. ╨Я╨╛╨╖╨▓╨╛╨╜╨╕╤В╨╡ ╨╜╨░╨╝: +7 (911) 865-44-60');
+      }
+    }).catch(function(){
+      if(btn){btn.disabled=false;btn.classList.remove('loading');btn.querySelector('.btn-label').textContent='╨Ю╤В╨┐╤А╨░╨▓╨╕╤В╤М ╨╖╨░╤П╨▓╨║╤Г';}
+      alert('╨Э╨╡ ╤Г╨┤╨░╨╗╨╛╤Б╤М ╨╛╤В╨┐╤А╨░╨▓╨╕╤В╤М. ╨Я╨╛╨╖╨▓╨╛╨╜╨╕╤В╨╡ ╨╜╨░╨╝: +7 (911) 865-44-60');
+    });
+  });
+
+  var io=('IntersectionObserver' in window)?new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}
+    });
+  },{threshold:.12}):null;
+  document.querySelectorAll('.reveal').forEach(function(el){
+    if(io)io.observe(el);else el.classList.add('in');
+  });
+})();
+
